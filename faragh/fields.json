@@ -1,0 +1,2549 @@
+{
+ "version": 1,
+ "storage_key": "bndn-faragh-v1",
+ "fields": [
+  {
+   "id": "p1-01-1",
+   "type": "checkbox",
+   "label": "حين تفكّرين في الفراغ، ماذا ترين؟ · تعطيلاً",
+   "section": "p1",
+   "page_title": "ماذا يعني الفراغ لكِ؟"
+  },
+  {
+   "id": "p1-01-2",
+   "type": "checkbox",
+   "label": "حين تفكّرين في الفراغ، ماذا ترين؟ · وقتاً يضيع",
+   "section": "p1",
+   "page_title": "ماذا يعني الفراغ لكِ؟"
+  },
+  {
+   "id": "p1-01-3",
+   "type": "checkbox",
+   "label": "حين تفكّرين في الفراغ، ماذا ترين؟ · فرصةً ذهبية",
+   "section": "p1",
+   "page_title": "ماذا يعني الفراغ لكِ؟"
+  },
+  {
+   "id": "p1-02",
+   "type": "text",
+   "label": "الفراغ بالنسبة لي…",
+   "section": "p1",
+   "page_title": "ماذا يعني الفراغ لكِ؟",
+   "rows": 1
+  },
+  {
+   "id": "p1-03",
+   "type": "textarea",
+   "label": "الفراغ بالنسبة لي (تفصيل)",
+   "section": "p1",
+   "page_title": "ماذا يعني الفراغ لكِ؟",
+   "rows": 7
+  },
+  {
+   "id": "p1-04",
+   "type": "text",
+   "label": "هدفي الكبير",
+   "section": "p1",
+   "page_title": "جرّبي: خطّتي",
+   "rows": 1
+  },
+  {
+   "id": "p1-05",
+   "type": "textarea",
+   "label": "خطّتي العظيمة",
+   "section": "p1",
+   "page_title": "جرّبي: خطّتي",
+   "rows": 3
+  },
+  {
+   "id": "p1-06",
+   "type": "textarea",
+   "label": "خطّتي المتوسطة",
+   "section": "p1",
+   "page_title": "جرّبي: خطّتي",
+   "rows": 3
+  },
+  {
+   "id": "p1-07",
+   "type": "textarea",
+   "label": "خطّتي السهلة",
+   "section": "p1",
+   "page_title": "جرّبي: خطّتي",
+   "rows": 3
+  },
+  {
+   "id": "p1-08",
+   "type": "text",
+   "label": "قاعدتي ١",
+   "section": "p1",
+   "page_title": "جرّبي: خطّتي",
+   "rows": 1
+  },
+  {
+   "id": "p1-09",
+   "type": "text",
+   "label": "قاعدتي ٢",
+   "section": "p1",
+   "page_title": "جرّبي: خطّتي",
+   "rows": 1
+  },
+  {
+   "id": "p1-10",
+   "type": "text",
+   "label": "دافعي 1",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟",
+   "rows": 1
+  },
+  {
+   "id": "p1-11-دائم",
+   "type": "checkbox",
+   "label": "دافع 1 · دائم",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-11-مؤقت",
+   "type": "checkbox",
+   "label": "دافع 1 · مؤقت",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-11-مادي",
+   "type": "checkbox",
+   "label": "دافع 1 · مادي",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-11-روحي",
+   "type": "checkbox",
+   "label": "دافع 1 · روحي",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-12",
+   "type": "text",
+   "label": "دافعي 2",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟",
+   "rows": 1
+  },
+  {
+   "id": "p1-13-دائم",
+   "type": "checkbox",
+   "label": "دافع 2 · دائم",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-13-مؤقت",
+   "type": "checkbox",
+   "label": "دافع 2 · مؤقت",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-13-مادي",
+   "type": "checkbox",
+   "label": "دافع 2 · مادي",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-13-روحي",
+   "type": "checkbox",
+   "label": "دافع 2 · روحي",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-14",
+   "type": "text",
+   "label": "دافعي 3",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟",
+   "rows": 1
+  },
+  {
+   "id": "p1-15-دائم",
+   "type": "checkbox",
+   "label": "دافع 3 · دائم",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-15-مؤقت",
+   "type": "checkbox",
+   "label": "دافع 3 · مؤقت",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-15-مادي",
+   "type": "checkbox",
+   "label": "دافع 3 · مادي",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-15-روحي",
+   "type": "checkbox",
+   "label": "دافع 3 · روحي",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-16",
+   "type": "text",
+   "label": "دافعي 4",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟",
+   "rows": 1
+  },
+  {
+   "id": "p1-17-دائم",
+   "type": "checkbox",
+   "label": "دافع 4 · دائم",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-17-مؤقت",
+   "type": "checkbox",
+   "label": "دافع 4 · مؤقت",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-17-مادي",
+   "type": "checkbox",
+   "label": "دافع 4 · مادي",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-17-روحي",
+   "type": "checkbox",
+   "label": "دافع 4 · روحي",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-18",
+   "type": "text",
+   "label": "دافعي 5",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟",
+   "rows": 1
+  },
+  {
+   "id": "p1-19-دائم",
+   "type": "checkbox",
+   "label": "دافع 5 · دائم",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-19-مؤقت",
+   "type": "checkbox",
+   "label": "دافع 5 · مؤقت",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-19-مادي",
+   "type": "checkbox",
+   "label": "دافع 5 · مادي",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-19-روحي",
+   "type": "checkbox",
+   "label": "دافع 5 · روحي",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-20",
+   "type": "text",
+   "label": "دافعي 6",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟",
+   "rows": 1
+  },
+  {
+   "id": "p1-21-دائم",
+   "type": "checkbox",
+   "label": "دافع 6 · دائم",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-21-مؤقت",
+   "type": "checkbox",
+   "label": "دافع 6 · مؤقت",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-21-مادي",
+   "type": "checkbox",
+   "label": "دافع 6 · مادي",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-21-روحي",
+   "type": "checkbox",
+   "label": "دافع 6 · روحي",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-22",
+   "type": "text",
+   "label": "دافعي 7",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟",
+   "rows": 1
+  },
+  {
+   "id": "p1-23-دائم",
+   "type": "checkbox",
+   "label": "دافع 7 · دائم",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-23-مؤقت",
+   "type": "checkbox",
+   "label": "دافع 7 · مؤقت",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-23-مادي",
+   "type": "checkbox",
+   "label": "دافع 7 · مادي",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-23-روحي",
+   "type": "checkbox",
+   "label": "دافع 7 · روحي",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-24",
+   "type": "text",
+   "label": "دافعي 8",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟",
+   "rows": 1
+  },
+  {
+   "id": "p1-25-دائم",
+   "type": "checkbox",
+   "label": "دافع 8 · دائم",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-25-مؤقت",
+   "type": "checkbox",
+   "label": "دافع 8 · مؤقت",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-25-مادي",
+   "type": "checkbox",
+   "label": "دافع 8 · مادي",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-25-روحي",
+   "type": "checkbox",
+   "label": "دافع 8 · روحي",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-26",
+   "type": "text",
+   "label": "دافعي 9",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟",
+   "rows": 1
+  },
+  {
+   "id": "p1-27-دائم",
+   "type": "checkbox",
+   "label": "دافع 9 · دائم",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-27-مؤقت",
+   "type": "checkbox",
+   "label": "دافع 9 · مؤقت",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-27-مادي",
+   "type": "checkbox",
+   "label": "دافع 9 · مادي",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-27-روحي",
+   "type": "checkbox",
+   "label": "دافع 9 · روحي",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-28",
+   "type": "text",
+   "label": "دافعي 10",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟",
+   "rows": 1
+  },
+  {
+   "id": "p1-29-دائم",
+   "type": "checkbox",
+   "label": "دافع 10 · دائم",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-29-مؤقت",
+   "type": "checkbox",
+   "label": "دافع 10 · مؤقت",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-29-مادي",
+   "type": "checkbox",
+   "label": "دافع 10 · مادي",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-29-روحي",
+   "type": "checkbox",
+   "label": "دافع 10 · روحي",
+   "section": "p1",
+   "page_title": "ما الذي يحرّككِ؟"
+  },
+  {
+   "id": "p1-30-1",
+   "type": "checkbox",
+   "label": "كم مقدار طاقتكِ لهذا اليوم؟ · 1",
+   "section": "p1",
+   "page_title": "طاقتكِ ومكافآتكِ"
+  },
+  {
+   "id": "p1-30-2",
+   "type": "checkbox",
+   "label": "كم مقدار طاقتكِ لهذا اليوم؟ · 2",
+   "section": "p1",
+   "page_title": "طاقتكِ ومكافآتكِ"
+  },
+  {
+   "id": "p1-30-3",
+   "type": "checkbox",
+   "label": "كم مقدار طاقتكِ لهذا اليوم؟ · 3",
+   "section": "p1",
+   "page_title": "طاقتكِ ومكافآتكِ"
+  },
+  {
+   "id": "p1-30-4",
+   "type": "checkbox",
+   "label": "كم مقدار طاقتكِ لهذا اليوم؟ · 4",
+   "section": "p1",
+   "page_title": "طاقتكِ ومكافآتكِ"
+  },
+  {
+   "id": "p1-30-5",
+   "type": "checkbox",
+   "label": "كم مقدار طاقتكِ لهذا اليوم؟ · 5",
+   "section": "p1",
+   "page_title": "طاقتكِ ومكافآتكِ"
+  },
+  {
+   "id": "p1-30-6",
+   "type": "checkbox",
+   "label": "كم مقدار طاقتكِ لهذا اليوم؟ · 6",
+   "section": "p1",
+   "page_title": "طاقتكِ ومكافآتكِ"
+  },
+  {
+   "id": "p1-30-7",
+   "type": "checkbox",
+   "label": "كم مقدار طاقتكِ لهذا اليوم؟ · 7",
+   "section": "p1",
+   "page_title": "طاقتكِ ومكافآتكِ"
+  },
+  {
+   "id": "p1-30-8",
+   "type": "checkbox",
+   "label": "كم مقدار طاقتكِ لهذا اليوم؟ · 8",
+   "section": "p1",
+   "page_title": "طاقتكِ ومكافآتكِ"
+  },
+  {
+   "id": "p1-30-9",
+   "type": "checkbox",
+   "label": "كم مقدار طاقتكِ لهذا اليوم؟ · 9",
+   "section": "p1",
+   "page_title": "طاقتكِ ومكافآتكِ"
+  },
+  {
+   "id": "p1-30-10",
+   "type": "checkbox",
+   "label": "كم مقدار طاقتكِ لهذا اليوم؟ · 10",
+   "section": "p1",
+   "page_title": "طاقتكِ ومكافآتكِ"
+  },
+  {
+   "id": "p1-31",
+   "type": "text",
+   "label": "كم معدّل إنتاجيتكِ؟",
+   "section": "p1",
+   "page_title": "طاقتكِ ومكافآتكِ",
+   "rows": 1
+  },
+  {
+   "id": "p1-32",
+   "type": "textarea",
+   "label": "كيف توفّرين أكبر قدرٍ من طاقتكِ؟",
+   "section": "p1",
+   "page_title": "طاقتكِ ومكافآتكِ",
+   "rows": 3
+  },
+  {
+   "id": "p2-01",
+   "type": "textarea",
+   "label": "ما نيّتكِ من اكتساب هذه العادة؟",
+   "section": "p2",
+   "page_title": "النيّة أولاً",
+   "rows": 5
+  },
+  {
+   "id": "p2-02",
+   "type": "textarea",
+   "label": "من أنتِ وأنتِ تمارسين هذه العادة؟",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 4
+  },
+  {
+   "id": "p2-03",
+   "type": "textarea",
+   "label": "ما الشعور الغالب عليكِ؟",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 3
+  },
+  {
+   "id": "p2-04",
+   "type": "textarea",
+   "label": "من غيركِ يمارس هذه العادة؟",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 3
+  },
+  {
+   "id": "p2-05-1",
+   "type": "checkbox",
+   "label": "كم مرة تمارسين هذه العادة؟ · أسبوعياً",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية"
+  },
+  {
+   "id": "p2-05-2",
+   "type": "checkbox",
+   "label": "كم مرة تمارسين هذه العادة؟ · يومياً",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية"
+  },
+  {
+   "id": "p2-06",
+   "type": "text",
+   "label": "كم مرة تمارسين هذه العادة؟ (تفصيل)",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 1
+  },
+  {
+   "id": "p2-07",
+   "type": "textarea",
+   "label": "ماذا ستقولين للعادة؟",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 4
+  },
+  {
+   "id": "p2-08",
+   "type": "textarea",
+   "label": "عن العادة القديمة",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 5
+  },
+  {
+   "id": "p2-09",
+   "type": "textarea",
+   "label": "عن العادة الجديدة",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 5
+  },
+  {
+   "id": "p2-10",
+   "type": "text",
+   "label": "أتعرّف على عادتي الحالية · 1",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 1
+  },
+  {
+   "id": "p2-11",
+   "type": "text",
+   "label": "أتعرّف على عادتي الحالية · 2",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 1
+  },
+  {
+   "id": "p2-12",
+   "type": "text",
+   "label": "أتعرّف على عادتي الحالية · 3",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 1
+  },
+  {
+   "id": "p2-13",
+   "type": "text",
+   "label": "أتعرّف على عادتي الحالية · 4",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 1
+  },
+  {
+   "id": "p2-14",
+   "type": "text",
+   "label": "أتعرّف على عادتي الحالية · 5",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 1
+  },
+  {
+   "id": "p2-15",
+   "type": "text",
+   "label": "أتعرّف على عادتي الحالية · 6",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 1
+  },
+  {
+   "id": "p2-16",
+   "type": "text",
+   "label": "أتعرّف على عادتي الحالية · 7",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 1
+  },
+  {
+   "id": "p2-17",
+   "type": "text",
+   "label": "أتعرّف على عادتي الحالية · 8",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 1
+  },
+  {
+   "id": "p2-18",
+   "type": "text",
+   "label": "أتعرّف على عادتي الحالية · 9",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 1
+  },
+  {
+   "id": "p2-19",
+   "type": "text",
+   "label": "أتعرّف على عادتي الحالية · 10",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 1
+  },
+  {
+   "id": "p2-20",
+   "type": "text",
+   "label": "أتعرّف على عادتي الحالية · 11",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 1
+  },
+  {
+   "id": "p2-21",
+   "type": "text",
+   "label": "أتعرّف على عادتي الحالية · 12",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 1
+  },
+  {
+   "id": "p2-22",
+   "type": "text",
+   "label": "أتعرّف على عادتي الحالية · 13",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 1
+  },
+  {
+   "id": "p2-23",
+   "type": "text",
+   "label": "أتعرّف على عادتي الحالية · 14",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 1
+  },
+  {
+   "id": "p2-24",
+   "type": "text",
+   "label": "أتعرّف على عادتي الحالية · 15",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 1
+  },
+  {
+   "id": "p2-25",
+   "type": "text",
+   "label": "أتعرّف على عادتي الحالية · 16",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 1
+  },
+  {
+   "id": "p2-26",
+   "type": "text",
+   "label": "أتعرّف على عادتي الحالية · 17",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 1
+  },
+  {
+   "id": "p2-27",
+   "type": "text",
+   "label": "أتعرّف على عادتي الحالية · 18",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 1
+  },
+  {
+   "id": "p2-28",
+   "type": "text",
+   "label": "أتعرّف على عادتي الحالية · 19",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 1
+  },
+  {
+   "id": "p2-29",
+   "type": "text",
+   "label": "أتعرّف على عادتي الحالية · 20",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 1
+  },
+  {
+   "id": "p2-30",
+   "type": "textarea",
+   "label": "السبب",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 3
+  },
+  {
+   "id": "p2-31",
+   "type": "textarea",
+   "label": "ما أفكاركِ عن هذا الأكل؟",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 3
+  },
+  {
+   "id": "p2-32",
+   "type": "textarea",
+   "label": "وما أفكاركِ عن الأكل الصحي؟",
+   "section": "p2",
+   "page_title": "أتعرّف على عادتي الحالية",
+   "rows": 3
+  },
+  {
+   "id": "p2-33",
+   "type": "textarea",
+   "label": "ما الذي يمنعكِ من ممارسة العادة الجديدة؟",
+   "section": "p2",
+   "page_title": "أختار عادتي الجديدة",
+   "rows": 3
+  },
+  {
+   "id": "p2-34",
+   "type": "textarea",
+   "label": "ما العادة البديلة؟",
+   "section": "p2",
+   "page_title": "أختار عادتي الجديدة",
+   "rows": 2
+  },
+  {
+   "id": "p2-35-1",
+   "type": "checkbox",
+   "label": "كم هو مهمٌّ لكِ اكتساب هذه العادة؟ · 1",
+   "section": "p2",
+   "page_title": "أختار عادتي الجديدة"
+  },
+  {
+   "id": "p2-35-2",
+   "type": "checkbox",
+   "label": "كم هو مهمٌّ لكِ اكتساب هذه العادة؟ · 2",
+   "section": "p2",
+   "page_title": "أختار عادتي الجديدة"
+  },
+  {
+   "id": "p2-35-3",
+   "type": "checkbox",
+   "label": "كم هو مهمٌّ لكِ اكتساب هذه العادة؟ · 3",
+   "section": "p2",
+   "page_title": "أختار عادتي الجديدة"
+  },
+  {
+   "id": "p2-35-4",
+   "type": "checkbox",
+   "label": "كم هو مهمٌّ لكِ اكتساب هذه العادة؟ · 4",
+   "section": "p2",
+   "page_title": "أختار عادتي الجديدة"
+  },
+  {
+   "id": "p2-35-5",
+   "type": "checkbox",
+   "label": "كم هو مهمٌّ لكِ اكتساب هذه العادة؟ · 5",
+   "section": "p2",
+   "page_title": "أختار عادتي الجديدة"
+  },
+  {
+   "id": "p2-35-6",
+   "type": "checkbox",
+   "label": "كم هو مهمٌّ لكِ اكتساب هذه العادة؟ · 6",
+   "section": "p2",
+   "page_title": "أختار عادتي الجديدة"
+  },
+  {
+   "id": "p2-35-7",
+   "type": "checkbox",
+   "label": "كم هو مهمٌّ لكِ اكتساب هذه العادة؟ · 7",
+   "section": "p2",
+   "page_title": "أختار عادتي الجديدة"
+  },
+  {
+   "id": "p2-35-8",
+   "type": "checkbox",
+   "label": "كم هو مهمٌّ لكِ اكتساب هذه العادة؟ · 8",
+   "section": "p2",
+   "page_title": "أختار عادتي الجديدة"
+  },
+  {
+   "id": "p2-35-9",
+   "type": "checkbox",
+   "label": "كم هو مهمٌّ لكِ اكتساب هذه العادة؟ · 9",
+   "section": "p2",
+   "page_title": "أختار عادتي الجديدة"
+  },
+  {
+   "id": "p2-35-10",
+   "type": "checkbox",
+   "label": "كم هو مهمٌّ لكِ اكتساب هذه العادة؟ · 10",
+   "section": "p2",
+   "page_title": "أختار عادتي الجديدة"
+  },
+  {
+   "id": "p2-36",
+   "type": "textarea",
+   "label": "من الأشخاص الذين يمارسون العادة الجديدة؟",
+   "section": "p2",
+   "page_title": "أختار عادتي الجديدة",
+   "rows": 3
+  },
+  {
+   "id": "p2-37",
+   "type": "textarea",
+   "label": "ماذا ستضيف هذه العادة إلى حياتكِ؟",
+   "section": "p2",
+   "page_title": "أختار عادتي الجديدة",
+   "rows": 3
+  },
+  {
+   "id": "p2-38",
+   "type": "textarea",
+   "label": "ما المكافأة؟",
+   "section": "p2",
+   "page_title": "أختار عادتي الجديدة",
+   "rows": 3
+  },
+  {
+   "id": "p2-39-1",
+   "type": "checkbox",
+   "label": "ما أنسب وقتٍ لممارسة هذه العادة؟ · صباحاً",
+   "section": "p2",
+   "page_title": "أختار عادتي الجديدة"
+  },
+  {
+   "id": "p2-39-2",
+   "type": "checkbox",
+   "label": "ما أنسب وقتٍ لممارسة هذه العادة؟ · ظهراً",
+   "section": "p2",
+   "page_title": "أختار عادتي الجديدة"
+  },
+  {
+   "id": "p2-39-3",
+   "type": "checkbox",
+   "label": "ما أنسب وقتٍ لممارسة هذه العادة؟ · عصراً",
+   "section": "p2",
+   "page_title": "أختار عادتي الجديدة"
+  },
+  {
+   "id": "p2-39-4",
+   "type": "checkbox",
+   "label": "ما أنسب وقتٍ لممارسة هذه العادة؟ · ليلاً",
+   "section": "p2",
+   "page_title": "أختار عادتي الجديدة"
+  },
+  {
+   "id": "p2-40",
+   "type": "textarea",
+   "label": "ملاحظاتي",
+   "section": "p2",
+   "page_title": "أختار عادتي الجديدة",
+   "rows": 2
+  },
+  {
+   "id": "p2-41",
+   "type": "textarea",
+   "label": "مشاعركِ وأنتِ تلتقين بنسختكِ الجديدة",
+   "section": "p2",
+   "page_title": "أختار عادتي الجديدة",
+   "rows": 4
+  },
+  {
+   "id": "p2-42",
+   "type": "textarea",
+   "label": "ما رمز هذه العادة في حياتكِ؟",
+   "section": "p2",
+   "page_title": "أختار عادتي الجديدة",
+   "rows": 3
+  },
+  {
+   "id": "p2-43",
+   "type": "textarea",
+   "label": "ما كلمتكِ لنفسكِ؟",
+   "section": "p2",
+   "page_title": "أختار عادتي الجديدة",
+   "rows": 3
+  },
+  {
+   "id": "p3-01",
+   "type": "textarea",
+   "label": "كيف سيكون شكل شخصيتكِ الجديدة؟",
+   "section": "p3",
+   "page_title": "صورتها",
+   "rows": 6
+  },
+  {
+   "id": "p3-02",
+   "type": "textarea",
+   "label": "ما شعوركِ الآن وأنتِ ترين هذه الهوية؟",
+   "section": "p3",
+   "page_title": "صورتها",
+   "rows": 5
+  },
+  {
+   "id": "p3-03",
+   "type": "textarea",
+   "label": "ما الشعور الغالب على هويتكِ الجديدة؟",
+   "section": "p3",
+   "page_title": "صورتها",
+   "rows": 5
+  },
+  {
+   "id": "p3-04",
+   "type": "textarea",
+   "label": "ماذا تلبس، وما ستايلها؟",
+   "section": "p3",
+   "page_title": "صورتها",
+   "rows": 7
+  },
+  {
+   "id": "p3-05",
+   "type": "textarea",
+   "label": "من صديقاتها؟",
+   "section": "p3",
+   "page_title": "عالمها",
+   "rows": 4
+  },
+  {
+   "id": "p3-06",
+   "type": "textarea",
+   "label": "ما مجتمعها الجديد؟",
+   "section": "p3",
+   "page_title": "عالمها",
+   "rows": 4
+  },
+  {
+   "id": "p3-07",
+   "type": "textarea",
+   "label": "ماذا تشتغل؟",
+   "section": "p3",
+   "page_title": "عالمها",
+   "rows": 3
+  },
+  {
+   "id": "p3-08",
+   "type": "textarea",
+   "label": "روتينها الصباحي",
+   "section": "p3",
+   "page_title": "عالمها",
+   "rows": 6
+  },
+  {
+   "id": "p3-09",
+   "type": "textarea",
+   "label": "روتينها المسائي",
+   "section": "p3",
+   "page_title": "عالمها",
+   "rows": 6
+  },
+  {
+   "id": "p3-10",
+   "type": "textarea",
+   "label": "ما عاداتها وممارساتها؟",
+   "section": "p3",
+   "page_title": "عالمها",
+   "rows": 3
+  },
+  {
+   "id": "p3-11",
+   "type": "textarea",
+   "label": "ما نوع علاقاتها بأهلها؟",
+   "section": "p3",
+   "page_title": "عالمها",
+   "rows": 3
+  },
+  {
+   "id": "p3-12",
+   "type": "textarea",
+   "label": "أين تسكن، ومع من؟",
+   "section": "p3",
+   "page_title": "عالمها",
+   "rows": 5
+  },
+  {
+   "id": "p3-13",
+   "type": "textarea",
+   "label": "أين تقضي أغلب وقتها؟",
+   "section": "p3",
+   "page_title": "عالمها",
+   "rows": 5
+  },
+  {
+   "id": "p3-14",
+   "type": "textarea",
+   "label": "ما الرابط بينكِ الآن وبين نسختكِ الجديدة؟",
+   "section": "p3",
+   "page_title": "الطريق إليها",
+   "rows": 3
+  },
+  {
+   "id": "p3-15",
+   "type": "textarea",
+   "label": "لماذا اخترتِ هذه الهوية؟",
+   "section": "p3",
+   "page_title": "الطريق إليها",
+   "rows": 3
+  },
+  {
+   "id": "p3-16",
+   "type": "textarea",
+   "label": "هل رأيتِ أحداً بهذه الهوية من قبل؟",
+   "section": "p3",
+   "page_title": "الطريق إليها",
+   "rows": 3
+  },
+  {
+   "id": "p3-17",
+   "type": "textarea",
+   "label": "ما أكثر شيءٍ تحبّينه في هذه الهوية؟",
+   "section": "p3",
+   "page_title": "الطريق إليها",
+   "rows": 2
+  },
+  {
+   "id": "p3-18",
+   "type": "textarea",
+   "label": "ما الصفات التي ستكون عليها هويتكِ الجديدة؟",
+   "section": "p3",
+   "page_title": "الطريق إليها",
+   "rows": 3
+  },
+  {
+   "id": "p3-19",
+   "type": "textarea",
+   "label": "ما كلمتكِ لهذه النسخة؟",
+   "section": "p3",
+   "page_title": "الطريق إليها",
+   "rows": 2
+  },
+  {
+   "id": "p3-20",
+   "type": "textarea",
+   "label": "ما المبالغ المالية عند هذه النسخة؟",
+   "section": "p3",
+   "page_title": "الطريق إليها",
+   "rows": 2
+  },
+  {
+   "id": "p3-21",
+   "type": "text",
+   "label": "قيمكِ · 1",
+   "section": "p3",
+   "page_title": "قيمكِ",
+   "rows": 1
+  },
+  {
+   "id": "p3-22",
+   "type": "text",
+   "label": "قيمكِ · 2",
+   "section": "p3",
+   "page_title": "قيمكِ",
+   "rows": 1
+  },
+  {
+   "id": "p3-23",
+   "type": "text",
+   "label": "قيمكِ · 3",
+   "section": "p3",
+   "page_title": "قيمكِ",
+   "rows": 1
+  },
+  {
+   "id": "p3-24",
+   "type": "text",
+   "label": "قيمكِ · 4",
+   "section": "p3",
+   "page_title": "قيمكِ",
+   "rows": 1
+  },
+  {
+   "id": "p3-25",
+   "type": "text",
+   "label": "قيمكِ · 5",
+   "section": "p3",
+   "page_title": "قيمكِ",
+   "rows": 1
+  },
+  {
+   "id": "p3-26",
+   "type": "text",
+   "label": "قيمكِ · 6",
+   "section": "p3",
+   "page_title": "قيمكِ",
+   "rows": 1
+  },
+  {
+   "id": "p3-27",
+   "type": "text",
+   "label": "قيمكِ · 7",
+   "section": "p3",
+   "page_title": "قيمكِ",
+   "rows": 1
+  },
+  {
+   "id": "p3-28",
+   "type": "text",
+   "label": "قيمكِ · 8",
+   "section": "p3",
+   "page_title": "قيمكِ",
+   "rows": 1
+  },
+  {
+   "id": "p3-29",
+   "type": "text",
+   "label": "قيمكِ · 9",
+   "section": "p3",
+   "page_title": "قيمكِ",
+   "rows": 1
+  },
+  {
+   "id": "p3-30",
+   "type": "text",
+   "label": "قيمكِ · 10",
+   "section": "p3",
+   "page_title": "قيمكِ",
+   "rows": 1
+  },
+  {
+   "id": "p3-31",
+   "type": "text",
+   "label": "قيمكِ · 11",
+   "section": "p3",
+   "page_title": "قيمكِ",
+   "rows": 1
+  },
+  {
+   "id": "p3-32",
+   "type": "text",
+   "label": "قيمكِ · 12",
+   "section": "p3",
+   "page_title": "قيمكِ",
+   "rows": 1
+  },
+  {
+   "id": "p3-33",
+   "type": "text",
+   "label": "قيمكِ · 13",
+   "section": "p3",
+   "page_title": "قيمكِ",
+   "rows": 1
+  },
+  {
+   "id": "p3-34",
+   "type": "text",
+   "label": "قيمكِ · 14",
+   "section": "p3",
+   "page_title": "قيمكِ",
+   "rows": 1
+  },
+  {
+   "id": "p3-35",
+   "type": "text",
+   "label": "قيمكِ · 15",
+   "section": "p3",
+   "page_title": "قيمكِ",
+   "rows": 1
+  },
+  {
+   "id": "p3-36",
+   "type": "text",
+   "label": "قيمكِ · 16",
+   "section": "p3",
+   "page_title": "قيمكِ",
+   "rows": 1
+  },
+  {
+   "id": "p3-37",
+   "type": "textarea",
+   "label": "ما الأمور التي تسرّع عيشكِ لهويتكِ الجديدة؟",
+   "section": "p3",
+   "page_title": "ما يقرّبكِ وما يؤخّركِ",
+   "rows": 6
+  },
+  {
+   "id": "p3-38-1",
+   "type": "checkbox",
+   "label": "كم أنتِ مؤمنة بهذه الهوية؟ · 1",
+   "section": "p3",
+   "page_title": "ما يقرّبكِ وما يؤخّركِ"
+  },
+  {
+   "id": "p3-38-2",
+   "type": "checkbox",
+   "label": "كم أنتِ مؤمنة بهذه الهوية؟ · 2",
+   "section": "p3",
+   "page_title": "ما يقرّبكِ وما يؤخّركِ"
+  },
+  {
+   "id": "p3-38-3",
+   "type": "checkbox",
+   "label": "كم أنتِ مؤمنة بهذه الهوية؟ · 3",
+   "section": "p3",
+   "page_title": "ما يقرّبكِ وما يؤخّركِ"
+  },
+  {
+   "id": "p3-38-4",
+   "type": "checkbox",
+   "label": "كم أنتِ مؤمنة بهذه الهوية؟ · 4",
+   "section": "p3",
+   "page_title": "ما يقرّبكِ وما يؤخّركِ"
+  },
+  {
+   "id": "p3-38-5",
+   "type": "checkbox",
+   "label": "كم أنتِ مؤمنة بهذه الهوية؟ · 5",
+   "section": "p3",
+   "page_title": "ما يقرّبكِ وما يؤخّركِ"
+  },
+  {
+   "id": "p3-38-6",
+   "type": "checkbox",
+   "label": "كم أنتِ مؤمنة بهذه الهوية؟ · 6",
+   "section": "p3",
+   "page_title": "ما يقرّبكِ وما يؤخّركِ"
+  },
+  {
+   "id": "p3-38-7",
+   "type": "checkbox",
+   "label": "كم أنتِ مؤمنة بهذه الهوية؟ · 7",
+   "section": "p3",
+   "page_title": "ما يقرّبكِ وما يؤخّركِ"
+  },
+  {
+   "id": "p3-38-8",
+   "type": "checkbox",
+   "label": "كم أنتِ مؤمنة بهذه الهوية؟ · 8",
+   "section": "p3",
+   "page_title": "ما يقرّبكِ وما يؤخّركِ"
+  },
+  {
+   "id": "p3-38-9",
+   "type": "checkbox",
+   "label": "كم أنتِ مؤمنة بهذه الهوية؟ · 9",
+   "section": "p3",
+   "page_title": "ما يقرّبكِ وما يؤخّركِ"
+  },
+  {
+   "id": "p3-38-10",
+   "type": "checkbox",
+   "label": "كم أنتِ مؤمنة بهذه الهوية؟ · 10",
+   "section": "p3",
+   "page_title": "ما يقرّبكِ وما يؤخّركِ"
+  },
+  {
+   "id": "p3-39",
+   "type": "textarea",
+   "label": "ما أفكاركِ ومعتقداتكِ عن هذه الهوية؟",
+   "section": "p3",
+   "page_title": "ما يقرّبكِ وما يؤخّركِ",
+   "rows": 3
+  },
+  {
+   "id": "p3-40",
+   "type": "textarea",
+   "label": "ومن تظنّين أنه قد يعيقكِ عنها؟",
+   "section": "p3",
+   "page_title": "ما يقرّبكِ وما يؤخّركِ",
+   "rows": 2
+  },
+  {
+   "id": "p3-41",
+   "type": "textarea",
+   "label": "لماذا لم تجسّدي هذه الهوية إلى الآن؟",
+   "section": "p3",
+   "page_title": "ما يقرّبكِ وما يؤخّركِ",
+   "rows": 3
+  },
+  {
+   "id": "p3-42",
+   "type": "textarea",
+   "label": "ما الذي يمنعكِ من عيش هذه الهوية الجديدة؟",
+   "section": "p3",
+   "page_title": "ما يقرّبكِ وما يؤخّركِ",
+   "rows": 3
+  },
+  {
+   "id": "p3-43",
+   "type": "textarea",
+   "label": "هويتي",
+   "section": "p3",
+   "page_title": "تعريفاتكِ الخاصة",
+   "rows": 2
+  },
+  {
+   "id": "p3-44",
+   "type": "textarea",
+   "label": "شعري",
+   "section": "p3",
+   "page_title": "تعريفاتكِ الخاصة",
+   "rows": 2
+  },
+  {
+   "id": "p3-45",
+   "type": "textarea",
+   "label": "جسمي",
+   "section": "p3",
+   "page_title": "تعريفاتكِ الخاصة",
+   "rows": 2
+  },
+  {
+   "id": "p3-46",
+   "type": "textarea",
+   "label": "وقتي",
+   "section": "p3",
+   "page_title": "تعريفاتكِ الخاصة",
+   "rows": 2
+  },
+  {
+   "id": "p3-47",
+   "type": "textarea",
+   "label": "هواياتي",
+   "section": "p3",
+   "page_title": "تعريفاتكِ الخاصة",
+   "rows": 2
+  },
+  {
+   "id": "p3-48",
+   "type": "textarea",
+   "label": "اسمي الخاص لـ…",
+   "section": "p3",
+   "page_title": "اسمكِ الخاص",
+   "rows": 3
+  },
+  {
+   "id": "p3-49",
+   "type": "textarea",
+   "label": "ما الشخصية التي سأبنيها الآن؟",
+   "section": "p3",
+   "page_title": "الشخصية التي أبنيها الآن",
+   "rows": 6
+  },
+  {
+   "id": "p3-50",
+   "type": "textarea",
+   "label": "ما الأفكار التي ستدعم بناء هذه الشخصية؟",
+   "section": "p3",
+   "page_title": "الشخصية التي أبنيها الآن",
+   "rows": 6
+  },
+  {
+   "id": "trk-01-1",
+   "type": "checkbox",
+   "label": "طاقتي اليوم · 1",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-01-2",
+   "type": "checkbox",
+   "label": "طاقتي اليوم · 2",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-01-3",
+   "type": "checkbox",
+   "label": "طاقتي اليوم · 3",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-01-4",
+   "type": "checkbox",
+   "label": "طاقتي اليوم · 4",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-01-5",
+   "type": "checkbox",
+   "label": "طاقتي اليوم · 5",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-01-6",
+   "type": "checkbox",
+   "label": "طاقتي اليوم · 6",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-01-7",
+   "type": "checkbox",
+   "label": "طاقتي اليوم · 7",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-01-8",
+   "type": "checkbox",
+   "label": "طاقتي اليوم · 8",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-01-9",
+   "type": "checkbox",
+   "label": "طاقتي اليوم · 9",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-01-10",
+   "type": "checkbox",
+   "label": "طاقتي اليوم · 10",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-02",
+   "type": "text",
+   "label": "مهمّتي 1",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-03",
+   "type": "checkbox",
+   "label": "مهمة 1 · قليل",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-04",
+   "type": "checkbox",
+   "label": "مهمة 1 · متوسط",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-05",
+   "type": "checkbox",
+   "label": "مهمة 1 · كثير",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-06",
+   "type": "checkbox",
+   "label": "مهمة 1 · أبدأ بها",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-07",
+   "type": "text",
+   "label": "مكافأتي بعد مهمة 1",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-08",
+   "type": "text",
+   "label": "مهمّتي 2",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-09",
+   "type": "checkbox",
+   "label": "مهمة 2 · قليل",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-10",
+   "type": "checkbox",
+   "label": "مهمة 2 · متوسط",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-11",
+   "type": "checkbox",
+   "label": "مهمة 2 · كثير",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-12",
+   "type": "checkbox",
+   "label": "مهمة 2 · أبدأ بها",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-13",
+   "type": "text",
+   "label": "مكافأتي بعد مهمة 2",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-14",
+   "type": "text",
+   "label": "مهمّتي 3",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-15",
+   "type": "checkbox",
+   "label": "مهمة 3 · قليل",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-16",
+   "type": "checkbox",
+   "label": "مهمة 3 · متوسط",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-17",
+   "type": "checkbox",
+   "label": "مهمة 3 · كثير",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-18",
+   "type": "checkbox",
+   "label": "مهمة 3 · أبدأ بها",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-19",
+   "type": "text",
+   "label": "مكافأتي بعد مهمة 3",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-20",
+   "type": "text",
+   "label": "مهمّتي 4",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-21",
+   "type": "checkbox",
+   "label": "مهمة 4 · قليل",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-22",
+   "type": "checkbox",
+   "label": "مهمة 4 · متوسط",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-23",
+   "type": "checkbox",
+   "label": "مهمة 4 · كثير",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-24",
+   "type": "checkbox",
+   "label": "مهمة 4 · أبدأ بها",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-25",
+   "type": "text",
+   "label": "مكافأتي بعد مهمة 4",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-26",
+   "type": "text",
+   "label": "مهمّتي 5",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-27",
+   "type": "checkbox",
+   "label": "مهمة 5 · قليل",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-28",
+   "type": "checkbox",
+   "label": "مهمة 5 · متوسط",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-29",
+   "type": "checkbox",
+   "label": "مهمة 5 · كثير",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-30",
+   "type": "checkbox",
+   "label": "مهمة 5 · أبدأ بها",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-31",
+   "type": "text",
+   "label": "مكافأتي بعد مهمة 5",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-32",
+   "type": "text",
+   "label": "مهمّتي 6",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-33",
+   "type": "checkbox",
+   "label": "مهمة 6 · قليل",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-34",
+   "type": "checkbox",
+   "label": "مهمة 6 · متوسط",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-35",
+   "type": "checkbox",
+   "label": "مهمة 6 · كثير",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-36",
+   "type": "checkbox",
+   "label": "مهمة 6 · أبدأ بها",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-37",
+   "type": "text",
+   "label": "مكافأتي بعد مهمة 6",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-38",
+   "type": "text",
+   "label": "مهمّتي 7",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-39",
+   "type": "checkbox",
+   "label": "مهمة 7 · قليل",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-40",
+   "type": "checkbox",
+   "label": "مهمة 7 · متوسط",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-41",
+   "type": "checkbox",
+   "label": "مهمة 7 · كثير",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-42",
+   "type": "checkbox",
+   "label": "مهمة 7 · أبدأ بها",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-43",
+   "type": "text",
+   "label": "مكافأتي بعد مهمة 7",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-44",
+   "type": "text",
+   "label": "مهمّتي 8",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-45",
+   "type": "checkbox",
+   "label": "مهمة 8 · قليل",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-46",
+   "type": "checkbox",
+   "label": "مهمة 8 · متوسط",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-47",
+   "type": "checkbox",
+   "label": "مهمة 8 · كثير",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-48",
+   "type": "checkbox",
+   "label": "مهمة 8 · أبدأ بها",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-49",
+   "type": "text",
+   "label": "مكافأتي بعد مهمة 8",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-50",
+   "type": "text",
+   "label": "مهمّتي 9",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-51",
+   "type": "checkbox",
+   "label": "مهمة 9 · قليل",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-52",
+   "type": "checkbox",
+   "label": "مهمة 9 · متوسط",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-53",
+   "type": "checkbox",
+   "label": "مهمة 9 · كثير",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-54",
+   "type": "checkbox",
+   "label": "مهمة 9 · أبدأ بها",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-55",
+   "type": "text",
+   "label": "مكافأتي بعد مهمة 9",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-56",
+   "type": "text",
+   "label": "مهمّتي 10",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-57",
+   "type": "checkbox",
+   "label": "مهمة 10 · قليل",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-58",
+   "type": "checkbox",
+   "label": "مهمة 10 · متوسط",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-59",
+   "type": "checkbox",
+   "label": "مهمة 10 · كثير",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-60",
+   "type": "checkbox",
+   "label": "مهمة 10 · أبدأ بها",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-61",
+   "type": "text",
+   "label": "مكافأتي بعد مهمة 10",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-62",
+   "type": "text",
+   "label": "مهمّتي 11",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-63",
+   "type": "checkbox",
+   "label": "مهمة 11 · قليل",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-64",
+   "type": "checkbox",
+   "label": "مهمة 11 · متوسط",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-65",
+   "type": "checkbox",
+   "label": "مهمة 11 · كثير",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-66",
+   "type": "checkbox",
+   "label": "مهمة 11 · أبدأ بها",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-67",
+   "type": "text",
+   "label": "مكافأتي بعد مهمة 11",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-68",
+   "type": "text",
+   "label": "مهمّتي 12",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-69",
+   "type": "checkbox",
+   "label": "مهمة 12 · قليل",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-70",
+   "type": "checkbox",
+   "label": "مهمة 12 · متوسط",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-71",
+   "type": "checkbox",
+   "label": "مهمة 12 · كثير",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-72",
+   "type": "checkbox",
+   "label": "مهمة 12 · أبدأ بها",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-73",
+   "type": "text",
+   "label": "مكافأتي بعد مهمة 12",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-74",
+   "type": "text",
+   "label": "مهمّتي 13",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-75",
+   "type": "checkbox",
+   "label": "مهمة 13 · قليل",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-76",
+   "type": "checkbox",
+   "label": "مهمة 13 · متوسط",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-77",
+   "type": "checkbox",
+   "label": "مهمة 13 · كثير",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-78",
+   "type": "checkbox",
+   "label": "مهمة 13 · أبدأ بها",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-79",
+   "type": "text",
+   "label": "مكافأتي بعد مهمة 13",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-80",
+   "type": "text",
+   "label": "مهمّتي 14",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-81",
+   "type": "checkbox",
+   "label": "مهمة 14 · قليل",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-82",
+   "type": "checkbox",
+   "label": "مهمة 14 · متوسط",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-83",
+   "type": "checkbox",
+   "label": "مهمة 14 · كثير",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-84",
+   "type": "checkbox",
+   "label": "مهمة 14 · أبدأ بها",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-85",
+   "type": "text",
+   "label": "مكافأتي بعد مهمة 14",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-86",
+   "type": "text",
+   "label": "مهمّتي 15",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-87",
+   "type": "checkbox",
+   "label": "مهمة 15 · قليل",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-88",
+   "type": "checkbox",
+   "label": "مهمة 15 · متوسط",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-89",
+   "type": "checkbox",
+   "label": "مهمة 15 · كثير",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-90",
+   "type": "checkbox",
+   "label": "مهمة 15 · أبدأ بها",
+   "section": "trk",
+   "page_title": "صفحات المتابعة"
+  },
+  {
+   "id": "trk-91",
+   "type": "text",
+   "label": "مكافأتي بعد مهمة 15",
+   "section": "trk",
+   "page_title": "صفحات المتابعة",
+   "rows": 1
+  },
+  {
+   "id": "trk-92",
+   "type": "text",
+   "label": "قائمة مكافآتي · 1",
+   "section": "trk",
+   "page_title": "قائمة مكافآتي",
+   "rows": 1
+  },
+  {
+   "id": "trk-93",
+   "type": "text",
+   "label": "قائمة مكافآتي · 2",
+   "section": "trk",
+   "page_title": "قائمة مكافآتي",
+   "rows": 1
+  },
+  {
+   "id": "trk-94",
+   "type": "text",
+   "label": "قائمة مكافآتي · 3",
+   "section": "trk",
+   "page_title": "قائمة مكافآتي",
+   "rows": 1
+  },
+  {
+   "id": "trk-95",
+   "type": "text",
+   "label": "قائمة مكافآتي · 4",
+   "section": "trk",
+   "page_title": "قائمة مكافآتي",
+   "rows": 1
+  },
+  {
+   "id": "trk-96",
+   "type": "text",
+   "label": "قائمة مكافآتي · 5",
+   "section": "trk",
+   "page_title": "قائمة مكافآتي",
+   "rows": 1
+  },
+  {
+   "id": "trk-97",
+   "type": "text",
+   "label": "قائمة مكافآتي · 6",
+   "section": "trk",
+   "page_title": "قائمة مكافآتي",
+   "rows": 1
+  },
+  {
+   "id": "trk-98",
+   "type": "text",
+   "label": "قائمة مكافآتي · 7",
+   "section": "trk",
+   "page_title": "قائمة مكافآتي",
+   "rows": 1
+  },
+  {
+   "id": "trk-99",
+   "type": "text",
+   "label": "قائمة مكافآتي · 8",
+   "section": "trk",
+   "page_title": "قائمة مكافآتي",
+   "rows": 1
+  },
+  {
+   "id": "trk-100",
+   "type": "text",
+   "label": "قائمة مكافآتي · 9",
+   "section": "trk",
+   "page_title": "قائمة مكافآتي",
+   "rows": 1
+  },
+  {
+   "id": "trk-101",
+   "type": "text",
+   "label": "قائمة مكافآتي · 10",
+   "section": "trk",
+   "page_title": "قائمة مكافآتي",
+   "rows": 1
+  },
+  {
+   "id": "trk-102",
+   "type": "text",
+   "label": "قائمة مكافآتي · 11",
+   "section": "trk",
+   "page_title": "قائمة مكافآتي",
+   "rows": 1
+  },
+  {
+   "id": "trk-103",
+   "type": "text",
+   "label": "قائمة مكافآتي · 12",
+   "section": "trk",
+   "page_title": "قائمة مكافآتي",
+   "rows": 1
+  },
+  {
+   "id": "trk-104",
+   "type": "text",
+   "label": "قائمة مكافآتي · 13",
+   "section": "trk",
+   "page_title": "قائمة مكافآتي",
+   "rows": 1
+  },
+  {
+   "id": "trk-105",
+   "type": "text",
+   "label": "قائمة مكافآتي · 14",
+   "section": "trk",
+   "page_title": "قائمة مكافآتي",
+   "rows": 1
+  },
+  {
+   "id": "trk-106",
+   "type": "text",
+   "label": "قائمة مكافآتي · 15",
+   "section": "trk",
+   "page_title": "قائمة مكافآتي",
+   "rows": 1
+  },
+  {
+   "id": "trk-107",
+   "type": "text",
+   "label": "قائمة مكافآتي · 16",
+   "section": "trk",
+   "page_title": "قائمة مكافآتي",
+   "rows": 1
+  },
+  {
+   "id": "trk-108",
+   "type": "text",
+   "label": "قائمة مكافآتي · 17",
+   "section": "trk",
+   "page_title": "قائمة مكافآتي",
+   "rows": 1
+  },
+  {
+   "id": "trk-109",
+   "type": "text",
+   "label": "قائمة مكافآتي · 18",
+   "section": "trk",
+   "page_title": "قائمة مكافآتي",
+   "rows": 1
+  },
+  {
+   "id": "trk-110",
+   "type": "text",
+   "label": "قائمة مكافآتي · 19",
+   "section": "trk",
+   "page_title": "قائمة مكافآتي",
+   "rows": 1
+  },
+  {
+   "id": "trk-111",
+   "type": "text",
+   "label": "قائمة مكافآتي · 20",
+   "section": "trk",
+   "page_title": "قائمة مكافآتي",
+   "rows": 1
+  },
+  {
+   "id": "trk-112",
+   "type": "text",
+   "label": "عادتي الجديدة",
+   "section": "trk",
+   "page_title": "متتبّع العادة",
+   "rows": 1
+  },
+  {
+   "id": "trk-113",
+   "type": "text",
+   "label": "نيّتي",
+   "section": "trk",
+   "page_title": "متتبّع العادة",
+   "rows": 1
+  },
+  {
+   "id": "trk-114",
+   "type": "text",
+   "label": "أنسب وقت لها",
+   "section": "trk",
+   "page_title": "متتبّع العادة",
+   "rows": 1
+  },
+  {
+   "id": "trk-115",
+   "type": "checkbox",
+   "label": "الأسبوع الأول · يوم 1",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-116",
+   "type": "checkbox",
+   "label": "الأسبوع الأول · يوم 2",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-117",
+   "type": "checkbox",
+   "label": "الأسبوع الأول · يوم 3",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-118",
+   "type": "checkbox",
+   "label": "الأسبوع الأول · يوم 4",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-119",
+   "type": "checkbox",
+   "label": "الأسبوع الأول · يوم 5",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-120",
+   "type": "checkbox",
+   "label": "الأسبوع الأول · يوم 6",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-121",
+   "type": "checkbox",
+   "label": "الأسبوع الأول · يوم 7",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-122",
+   "type": "checkbox",
+   "label": "الأسبوع الثاني · يوم 1",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-123",
+   "type": "checkbox",
+   "label": "الأسبوع الثاني · يوم 2",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-124",
+   "type": "checkbox",
+   "label": "الأسبوع الثاني · يوم 3",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-125",
+   "type": "checkbox",
+   "label": "الأسبوع الثاني · يوم 4",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-126",
+   "type": "checkbox",
+   "label": "الأسبوع الثاني · يوم 5",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-127",
+   "type": "checkbox",
+   "label": "الأسبوع الثاني · يوم 6",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-128",
+   "type": "checkbox",
+   "label": "الأسبوع الثاني · يوم 7",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-129",
+   "type": "checkbox",
+   "label": "الأسبوع الثالث · يوم 1",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-130",
+   "type": "checkbox",
+   "label": "الأسبوع الثالث · يوم 2",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-131",
+   "type": "checkbox",
+   "label": "الأسبوع الثالث · يوم 3",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-132",
+   "type": "checkbox",
+   "label": "الأسبوع الثالث · يوم 4",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-133",
+   "type": "checkbox",
+   "label": "الأسبوع الثالث · يوم 5",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-134",
+   "type": "checkbox",
+   "label": "الأسبوع الثالث · يوم 6",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-135",
+   "type": "checkbox",
+   "label": "الأسبوع الثالث · يوم 7",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-136",
+   "type": "checkbox",
+   "label": "الأسبوع الرابع · يوم 1",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-137",
+   "type": "checkbox",
+   "label": "الأسبوع الرابع · يوم 2",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-138",
+   "type": "checkbox",
+   "label": "الأسبوع الرابع · يوم 3",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-139",
+   "type": "checkbox",
+   "label": "الأسبوع الرابع · يوم 4",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-140",
+   "type": "checkbox",
+   "label": "الأسبوع الرابع · يوم 5",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-141",
+   "type": "checkbox",
+   "label": "الأسبوع الرابع · يوم 6",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-142",
+   "type": "checkbox",
+   "label": "الأسبوع الرابع · يوم 7",
+   "section": "trk",
+   "page_title": "متتبّع العادة"
+  },
+  {
+   "id": "trk-143",
+   "type": "text",
+   "label": "كلمتي لنفسي",
+   "section": "trk",
+   "page_title": "متتبّع العادة",
+   "rows": 1
+  }
+ ]
+}
