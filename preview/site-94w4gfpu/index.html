@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>بندن · تصميم مبدئي</title>
+<style>
+@font-face{font-family:"IBM Plex Sans Arabic";font-weight:300;src:url(assets/IBMPlexSansArabic-Light.ttf)}
+@font-face{font-family:"IBM Plex Sans Arabic";font-weight:400;src:url(assets/IBMPlexSansArabic-Regular.ttf)}
+@font-face{font-family:"IBM Plex Sans Arabic";font-weight:500;src:url(assets/IBMPlexSansArabic-Medium.ttf)}
+@font-face{font-family:"IBM Plex Sans Arabic";font-weight:600;src:url(assets/IBMPlexSansArabic-SemiBold.ttf)}
+:root{--cream:#f8ede5;--rose:#dfc1ba;--red:#591114;--ink:#591114;--muted:#8a4a4c;--line:rgba(89,17,20,.16)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:"IBM Plex Sans Arabic",sans-serif;font-weight:400;color:var(--ink);background:var(--cream) url(assets/paper.jpg) repeat;background-size:420px auto;line-height:1.9;font-size:16px;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%;display:block}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+.logo{display:inline-block;background:currentColor;-webkit-mask:url(assets/logo.svg) center/contain no-repeat;mask:url(assets/logo.svg) center/contain no-repeat;aspect-ratio:1027/502}
+.velvet{background:#591114 url(assets/velvet.jpg) repeat;background-size:360px auto;color:var(--cream);position:relative}
+.velvet::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 50% 0%,rgba(255,220,210,.10),transparent 60%),linear-gradient(rgba(40,0,5,.08),rgba(40,0,5,.25));pointer-events:none;border-radius:inherit}
+.velvet>*{position:relative}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+.demo-bar{background:var(--rose);color:var(--red);text-align:center;font-size:12.5px;padding:6px 12px;font-weight:500}
+
+/* header */
+header{position:sticky;top:0;z-index:30;background:rgba(248,237,229,.9);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+header .logo{height:30px;color:var(--red)}
+nav.desk{display:none;gap:26px;font-size:15px;font-weight:500}
+nav.desk a{text-decoration:none;opacity:.85}
+header .h-cta{display:none}
+.burger{width:44px;height:44px;border:1px solid var(--line);border-radius:14px;background:transparent;display:grid;place-items:center;cursor:pointer;color:var(--red)}
+.burger span{display:block;width:18px;height:1.6px;background:currentColor;box-shadow:0 -6px 0 currentColor,0 6px 0 currentColor}
+.drawer{position:fixed;inset:0;z-index:40;display:none}
+.drawer.open{display:block}
+.drawer .panel{position:absolute;inset:0 0 0 auto;width:min(86vw,360px);padding:22px 24px calc(28px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:4px;overflow:auto}
+.drawer .shade{position:absolute;inset:0;background:rgba(30,0,4,.45)}
+.drawer .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.drawer .top .logo{height:30px;color:var(--cream)}
+.drawer .x{width:44px;height:44px;border-radius:14px;border:1px solid rgba(248,237,229,.4);background:transparent;color:var(--cream);font-size:22px;font-family:inherit}
+.drawer a.l{display:flex;justify-content:space-between;text-decoration:none;padding:13px 2px;border-bottom:1px solid rgba(248,237,229,.18);font-size:18px;font-weight:500}
+.drawer a.l small{color:var(--rose);font-weight:300;font-size:13px}
+.drawer .btn{margin-top:22px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:10px 26px;border-radius:999px;text-decoration:none;font-weight:500;font-size:16.5px;border:1px solid transparent;transition:transform .15s}
+.btn:active{transform:translateY(1px)}
+.btn.cream{background:var(--cream);color:var(--red);box-shadow:0 8px 22px rgba(20,0,5,.3)}
+.btn.glass{background:linear-gradient(135deg,rgba(255,255,255,.22),rgba(255,255,255,.06));border-color:rgba(255,255,255,.5);color:#fff;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.btn.red{background:var(--red) url(assets/velvet.jpg);background-size:240px auto;color:var(--cream);box-shadow:0 6px 16px rgba(89,17,20,.25)}
+.btn.line{border-color:var(--red);color:var(--red);background:transparent}
+.btn.block{display:flex;width:100%}
+
+/* hero */
+.hero{padding:44px 0 56px;overflow:hidden}
+.hero .lace{position:absolute;left:0;right:0;height:34px;background:url(assets/lace-cream.png) repeat-x;background-size:52px 34px;opacity:.8;pointer-events:none}
+.hero .lace.t{top:0}.hero .lace.b{bottom:0;transform:scaleY(-1)}
+.hero .grid{display:grid;gap:30px;align-items:center}
+.arch{width:min(66vw,260px);margin:8px auto 0;border-radius:999px 999px 18px 18px;overflow:hidden;box-shadow:0 14px 34px rgba(20,0,5,.5);border:1px solid rgba(248,237,229,.35);aspect-ratio:4/5;background:url(assets/door.jpg) center/cover}
+.hero .txt{text-align:center}
+.eyebrow{font-size:13px;letter-spacing:.06em;color:var(--rose)}
+.hero .logo{height:64px;color:var(--cream);margin:10px auto 6px;display:block;width:auto}
+.hero h1{font-weight:500;font-size:21px;line-height:1.6;margin:6px 0 8px}
+.hero p{color:var(--rose);margin:0 auto 24px;max-width:28em;font-weight:300}
+.ctas{display:flex;flex-direction:column;gap:12px;max-width:340px;margin:0 auto}
+
+/* quick links */
+.quick{padding:26px 0 6px}
+.chips{display:flex;gap:10px;overflow-x:auto;padding:4px 22px 10px;margin:0 -22px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;display:flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.5);text-decoration:none;font-size:14.5px;font-weight:500;white-space:nowrap}
+.chip i{width:8px;height:8px;border-radius:50%;background:var(--red);display:inline-block}
+
+/* sections */
+section.s{padding:56px 0}
+.sh{text-align:center;margin-bottom:28px}
+.sh .k{font-size:13px;color:var(--muted);letter-spacing:.05em}
+.sh h2{font-size:27px;font-weight:600;margin:2px 0 4px;line-height:1.5}
+.sh p{margin:0 auto;color:var(--muted);max-width:30em;font-weight:300}
+.orn{display:block;margin:10px auto 0;width:110px;color:var(--red);opacity:.45}
+
+.cards{display:grid;gap:18px}
+.card{background:rgba(255,252,249,.75);border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 10px 30px rgba(89,17,20,.07)}
+.card .body{padding:22px 22px 18px}
+.card h3{margin:0;font-size:22px;font-weight:600;line-height:1.5}
+.card .meta{color:var(--muted);font-size:14.5px;margin:4px 0 0}
+.tag{display:inline-block;font-size:12px;padding:2px 12px;border-radius:999px;background:var(--rose);color:var(--red);font-weight:500;margin-bottom:8px}
+.price{padding:20px 22px 22px;border-radius:0}
+.price .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px;padding:6px 0}
+.price .row+.row{border-top:1px solid rgba(248,237,229,.18)}
+.price .lbl{font-size:14.5px;color:var(--rose)}
+.price .amt{text-align:left}
+.price .amt b{font-size:24px;font-weight:600;display:block;line-height:1.3}
+.price .amt small{font-size:13px;color:var(--rose)}
+.price .btn{margin-top:14px}
+.soon{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.soon .c{border:1px dashed rgba(89,17,20,.35);border-radius:20px;padding:16px 14px;text-align:center;background:rgba(255,255,255,.35)}
+.soon .c .ph{height:90px;border-radius:14px;margin-bottom:10px;background:center/cover}
+.soon h4{margin:0;font-size:16.5px;font-weight:600}
+.soon span{font-size:13px;color:var(--muted)}
+
+/* booklet */
+.book{display:grid;gap:26px;align-items:center}
+.cover{width:min(70vw,300px);margin:0 auto;transform:rotate(-3deg);border-radius:6px;box-shadow:0 22px 40px rgba(89,17,20,.28);border:6px solid #fffaf6}
+.book .info{text-align:center}
+.book h3{font-size:28px;margin:4px 0 0;font-weight:600}
+.chap{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 0 18px;padding:0;list-style:none}
+.chap li{font-size:13.5px;padding:3px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.5)}
+.pricebox{border-radius:24px;padding:22px;text-align:center;box-shadow:0 14px 30px rgba(89,17,20,.25);overflow:hidden}
+.pricebox .now{font-size:34px;font-weight:600;line-height:1.3}
+.pricebox .now small{font-size:16px;font-weight:400;color:var(--rose)}
+.pricebox .old i{font-style:normal;margin:0 8px;opacity:.7}.pricebox .old{color:var(--rose);opacity:.85;font-size:15px}
+.pricebox .save{display:inline-block;margin:10px 0 16px;font-size:13.5px;padding:3px 14px;border-radius:999px;background:rgba(248,237,229,.16);border:1px solid rgba(248,237,229,.35)}
+.pricebox .btns{display:grid;gap:10px}
+.free{margin-top:14px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,.55);text-align:right}
+.free b{font-size:16px}.free span:not(.zero){font-size:13.5px;color:var(--muted);display:block}
+.free .btn{min-height:42px;padding:6px 18px;font-size:15px;flex:none}
+
+/* newsletter */
+.news{border-radius:28px;padding:34px 22px;text-align:center;overflow:hidden}
+.news h2{font-size:26px;margin:4px 0;font-weight:600}
+.news p{color:var(--rose);margin:0 0 20px;font-weight:300}
+.news form{display:flex;flex-direction:column;gap:10px;max-width:440px;margin:0 auto}
+.news input{height:52px;border-radius:999px;border:1px solid rgba(248,237,229,.5);background:rgba(255,255,255,.1);color:#fff;padding:0 20px;font:inherit;font-size:16px;text-align:right}
+.news input::placeholder{color:rgba(248,237,229,.7)}
+.news .n{font-size:12.5px;color:var(--rose);margin-top:10px}
+
+/* community */
+.comm{display:grid;gap:14px}
+.ccard{display:flex;align-items:center;gap:16px;padding:16px;border-radius:24px;text-decoration:none;border:1px solid var(--line);background:rgba(255,252,249,.75)}
+.ccard .ph{width:76px;height:76px;flex:none;border-radius:18px;background:center/cover}
+.ccard b{font-size:18px;display:block}
+.ccard span{font-size:14px;color:var(--muted)}
+.ccard .go{margin-inline-start:auto;font-size:22px;opacity:.6}
+
+/* account */
+.concept{display:inline-block;font-size:12.5px;padding:3px 14px;border-radius:999px;border:1px dashed var(--red);font-weight:500;margin-bottom:6px}
+.phone{max-width:390px;margin:0 auto;border-radius:30px;border:1px solid var(--line);background:#fffaf6;box-shadow:0 18px 40px rgba(89,17,20,.12);overflow:hidden}
+.phone .ah{padding:22px 20px 20px;display:flex;justify-content:space-between;align-items:center}
+.phone .ah b{font-size:19px;display:block}
+.phone .ah span{font-size:13px;color:var(--rose)}
+.phone .ah .av{width:46px;height:46px;border-radius:50%;background:var(--cream);color:var(--red);display:grid;place-items:center;font-weight:600}
+.phone .ab{padding:18px 18px 22px;display:grid;gap:12px}
+.phone .lbl{font-size:13px;color:var(--muted);font-weight:500}
+.item{display:flex;gap:12px;align-items:center;padding:12px;border:1px solid var(--line);border-radius:18px;background:#fff}
+.item img{width:48px;height:66px;object-fit:cover;border-radius:6px}
+.item .ic{width:48px;height:48px;border-radius:14px;background:var(--rose);display:grid;place-items:center;font-weight:600;font-size:13px}
+.item .t{flex:1;min-width:0}
+.item b{display:block;font-size:15.5px}
+.item span{font-size:12.5px;color:var(--muted)}
+.bar{height:6px;border-radius:9px;background:var(--rose);margin-top:6px;overflow:hidden}
+.bar i{display:block;height:100%;width:30%;background:var(--red)}
+.item .mini{font-size:13px;font-weight:500;text-decoration:none;padding:6px 12px;border-radius:999px;background:var(--red);color:var(--cream);flex:none}
+.codebox{padding:12px 14px;border-radius:16px;background:var(--cream);font-size:13px;color:var(--muted)}
+.ex{font-size:12px;color:var(--muted);text-align:center;margin-top:12px}
+
+/* faq */
+.faq{max-width:760px;margin:0 auto;display:grid;gap:10px}
+.faq details{border:1px solid var(--line);border-radius:18px;background:rgba(255,252,249,.75);padding:0 18px}
+.faq summary{list-style:none;cursor:pointer;padding:15px 0;font-weight:600;font-size:16px;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-weight:300;font-size:22px;line-height:1.2}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin:0 0 16px;color:var(--muted);font-size:15px}
+
+/* end + footer */
+.end{padding:60px 0 64px;text-align:center;overflow:hidden}
+.end .lace{position:absolute;left:0;right:0;top:0;height:34px;background:url(assets/lace-cream.png) repeat-x;background-size:52px 34px;opacity:.8}
+.end h2{font-size:26px;font-weight:500;margin:10px 0 6px}
+.end p{color:var(--rose);margin:0 0 22px;font-weight:300}
+footer{padding:40px 0 calc(30px + env(safe-area-inset-bottom));text-align:center}
+footer .logo{height:40px;color:var(--red)}
+.flinks{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 20px;margin:16px 0;font-size:14.5px}
+.flinks a{text-decoration:none}
+.support{display:grid;gap:8px;max-width:420px;margin:18px auto 0;padding:16px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,.5);font-size:14.5px}
+.support b{font-size:15px}
+.support a{text-decoration:none;font-weight:500}
+.copy{font-size:12.5px;color:var(--muted);margin-top:18px}
+
+@media(min-width:900px){
+  body{font-size:17px}
+  nav.desk{display:flex}header .h-cta{display:inline-flex;min-height:42px;padding:6px 20px;font-size:15px}
+  .burger{display:none}
+  header .wrap{height:72px} header .logo{height:34px}
+  .hero{padding:80px 0 90px}
+  .hero .grid{grid-template-columns:1.1fr .9fr;gap:60px}
+  .hero .txt{text-align:right}
+  .hero .logo{margin:12px 0 8px;height:96px}
+  .hero h1{font-size:34px}
+  .hero p{margin-right:0;font-size:18px}
+  .ctas{flex-direction:row;max-width:none;margin:0}
+  .arch{width:380px}
+  .chips{justify-content:center;overflow:visible;flex-wrap:wrap}
+  section.s{padding:84px 0}
+  .sh h2{font-size:36px}
+  .cards{grid-template-columns:1fr 1fr;align-items:start}
+  .soon{grid-template-columns:1fr 1fr}
+  .book{grid-template-columns:.9fr 1.1fr;gap:60px}
+  .book .info{text-align:right}.chap{justify-content:flex-start}
+  .cover{width:340px}
+  .news{padding:56px}
+  .news form{flex-direction:row;max-width:560px}.news input{flex:1}
+  .comm{grid-template-columns:1fr 1fr}
+  .acc{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .acc .sh{text-align:right}
+  .end h2{font-size:34px}
+}
+</style>
+</head>
+<body>
+<div class="demo-bar">تصميم مبدئي للمعاينة فقط · غير منشور</div>
+
+<header>
+  <div class="wrap">
+    <a href="#top" aria-label="بندن"><span class="logo" style="height:30px"></span></a>
+    <nav class="desk">
+      <a href="#programs">البرامج</a><a href="#booklet">الكتيّب</a><a href="#newsletter">النشرة</a><a href="#community">المجتمع</a><a href="#account">حسابي</a><a href="#faq">الأسئلة</a>
+    </nav>
+    <a class="btn red h-cta" href="#programs">اشتركي</a>
+    <button class="burger" aria-label="القائمة" onclick="document.getElementById('dr').classList.add('open')"><span></span></button>
+  </div>
+</header>
+
+<div class="drawer" id="dr">
+  <div class="shade" onclick="this.parentNode.classList.remove('open')"></div>
+  <div class="panel velvet">
+    <div class="top"><span class="logo" style="height:30px"></span><button class="x" aria-label="إغلاق" onclick="document.getElementById('dr').classList.remove('open')">×</button></div>
+    <a class="l" href="#programs" onclick="dr.classList.remove('open')">البرامج <small>وتيرة · ترنيمة</small></a>
+    <a class="l" href="#booklet" onclick="dr.classList.remove('open')">كتيّب فنّ الفراغ <small>43 صفحة</small></a>
+    <a class="l" href="https://thebndn.thewayl.com/" target="_blank" rel="noopener">المتجر <small>Wayl</small></a>
+    <a class="l" href="#newsletter" onclick="dr.classList.remove('open')">النشرة الأحدية <small>كل أحد</small></a>
+    <a class="l" href="#community" onclick="dr.classList.remove('open')">المجتمع <small>واتساب · إنستغرام</small></a>
+    <a class="l" href="#account" onclick="dr.classList.remove('open')">حسابي <small>قريباً</small></a>
+    <a class="l" href="#faq" onclick="dr.classList.remove('open')">الأسئلة والدعم <small>نحن هنا</small></a>
+    <a class="btn cream block" href="#programs" onclick="dr.classList.remove('open')">اشتركي الآن</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero velvet" id="top">
+  <div class="lace t"></div><div class="lace b"></div>
+  <div class="wrap grid">
+    <div class="txt">
+      <div class="eyebrow">إنتاجية شاعرية · توازن عاطفي</div>
+      <span class="logo" aria-label="بندن" style="aspect-ratio:1027/502"></span>
+      <h1>عن متعة الانشغال، وجمال الفتات في الرحلة</h1>
+      <p>برامج، كتيّبات، نشرة أحدية ومجتمع هادئ… كلّ بندن في مكان واحد.</p>
+      <div class="ctas">
+        <a class="btn cream" href="#programs">اشتركي</a>
+        <a class="btn glass" href="#programs">تصفّحي البرامج</a>
+      </div>
+    </div>
+    <div class="arch" role="img" aria-label="باب خشبي"></div>
+  </div>
+</section>
+
+<!-- QUICK LINKS -->
+<div class="quick"><div class="wrap">
+  <div class="chips">
+    <a class="chip" href="#programs"><i></i>البرامج</a>
+    <a class="chip" href="#booklet"><i></i>الكتيّب</a>
+    <a class="chip" href="https://thebndn.thewayl.com/" target="_blank" rel="noopener"><i></i>المتجر</a>
+    <a class="chip" href="https://ehdaash.com/@bndn" target="_blank" rel="noopener"><i></i>النشرة الأحدية</a>
+    <a class="chip" href="https://chat.whatsapp.com/CQlfldqnIbUALMXve7nvPB?mode=gi_t" target="_blank" rel="noopener"><i></i>واتساب</a>
+    <a class="chip" href="https://instagram.com/thebndn" target="_blank" rel="noopener"><i></i>إنستغرام</a>
+  </div>
+</div></div>
+
+<!-- PROGRAMS -->
+<section class="s" id="programs">
+  <div class="wrap">
+    <div class="sh"><div class="k">البرامج</div><h2>اختاري مساحتكِ</h2><p>دائرة جماعية أو جلسات فردية، على إيقاعكِ.</p>
+      <svg class="orn" viewBox="0 0 120 14" fill="none" stroke="currentColor"><path d="M2 7H46M74 7H118"/><circle cx="60" cy="7" r="2.2"/><circle cx="53" cy="7" r="1.4"/><circle cx="67" cy="7" r="1.4"/></svg></div>
+    <div class="cards">
+      <article class="card">
+        <div class="body"><span class="tag">دائرة جماعية</span><h3>وتيرة أنسيات</h3><p class="meta">دائرة من ستّ مقاعد · شهران · جلسة للحديث وأخرى صامتة</p></div>
+        <div class="price velvet">
+          <div class="row"><span class="lbl">البرنامج كاملاً<br>على دفعتين شهريتين</span><span class="amt"><b class="ltr">$69</b></span></div><div class="fxwrap"><button type="button" class="fxbtn" data-usd="69" data-label="وتيرة · البرنامج كاملاً">🌍 شوفي السعر بعملتچ</button></div>
+          <a class="btn cream block" href="https://tally.so/r/gDlPA4" target="_blank" rel="noopener">سجّلي في وتيرة</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="body"><span class="tag">جلسات فردية</span><h3>ترنيمة المَدار</h3><p class="meta">جلسات فردية · مساحة خاصة جداً بيني وبينكِ</p></div>
+        <div class="price velvet">
+          <div class="row"><span class="lbl">جلسة واحدة<br><span class="ltr">90</span> دقيقة</span><span class="amt"><b class="ltr">$40</b></span></div>
+          <div class="row"><span class="lbl">برنامج شهري<br><span class="ltr">4</span> جلسات</span><span class="amt"><b class="ltr">$130</b></span></div><div class="fxwrap"><button type="button" class="fxbtn" data-usd="40" data-label="جلسة واحدة">🌍 شوفي السعر بعملتچ</button></div>
+          <a class="btn cream block" href="https://tally.so/r/Y51BVv" target="_blank" rel="noopener">احجزي جلستكِ</a>
+        </div>
+      </article>
+    </div>
+    <div class="soon">
+      <div class="c"><div class="ph" style="background-image:url(assets/candle.jpg)"></div><h4>الكروشيه والأعمال اليدوية</h4><span>قريباً</span></div>
+      <div class="c"><div class="ph" style="background-image:url(assets/chandelier.jpg)"></div><h4>ورش فنية</h4><span>قريباً</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKLET -->
+<section class="s" id="booklet" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sh"><div class="k">الكتيّبات</div><h2>كتيّب تفاعلي بين يديكِ</h2></div>
+    <div class="book">
+      <img class="cover" src="assets/cover.webp" alt="غلاف كورس فنّ الفراغ">
+      <div class="info">
+        <span class="tag">كتيّب تفاعلي · <span class="ltr">43</span> صفحة</span>
+        <h3>كورس فنّ الفراغ</h3>
+        <p class="meta" style="color:var(--muted);margin:2px 0 0">مساحةٌ صغيرة تنتظركِ، لا وقتٌ يضيع</p>
+        <ul class="chap"><li>فنّ الفراغ</li><li>العادات</li><li>تكوين هوية جديدة</li></ul>
+        <div class="pricebox velvet">
+          <div style="font-size:13.5px;color:var(--rose)">سعر الإطلاق</div>
+          <div class="now"><span class="ltr">$14</span></div>
+          <div class="old"><s class="ltr">$19</s></div>
+          <div class="fxwrap"><button type="button" class="fxbtn" data-usd="14" data-label="كتيّب فن الفراغ">🌍 شوفي السعر بعملتچ</button></div><div class="save">وفّري <span class="ltr">$5</span></div>
+          <div class="btns">
+            <a class="btn cream" href="https://thebndn.thewayl.com/" target="_blank" rel="noopener">اطلبي الكتيّب الآن</a>
+            <a class="btn glass" href="booklet/index.html">تصفّحي الكتيّب</a>
+          </div>
+        </div>
+        <div class="free">
+          <div><b>النسخة المجانية <span class="ltr zero" style="display:inline-block;margin-inline-start:6px;padding:0 10px;border-radius:999px;background:var(--rose);font-size:14px">$0</span></b><span>جرّبي قبل ما تقررين</span></div>
+          <a class="btn line" href="https://oobaneen1-boop.github.io/bndn/faragh/" target="_blank" rel="noopener">احصلي عليها</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="s" id="newsletter" style="padding-top:10px">
+  <div class="wrap">
+    <div class="news velvet">
+      <div class="eyebrow">كل يوم أحد</div>
+      <h2>نشرة بندن الأحدية</h2>
+      <p>تصلكِ كل أحد · اشتركي الآن</p>
+      <form onsubmit="event.preventDefault();window.open('https://ehdaash.com/@bndn','_blank')">
+        <input type="email" placeholder="إيميلكِ" aria-label="الإيميل" dir="ltr" style="text-align:left">
+        <button class="btn cream" type="submit" style="border:0;font-family:inherit;cursor:pointer">اشتركي</button>
+      </form>
+      <div class="n">الاشتراك عبر صفحة النشرة على إهداش</div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMUNITY -->
+<section class="s" id="community" style="padding-top:10px">
+  <div class="wrap">
+    <div class="sh"><div class="k">المجتمع</div><h2>تعالي نلتقي</h2></div>
+    <div class="comm">
+      <a class="ccard" href="https://chat.whatsapp.com/CQlfldqnIbUALMXve7nvPB?mode=gi_t" target="_blank" rel="noopener"><div class="ph" style="background-image:url(assets/stairs.jpg)"></div><div><b>مجتمع بندن على واتساب</b><span>مساحة هادئة نلتقي فيها · تحبين تدخلين معانا؟</span></div><span class="go">←</span></a>
+      <a class="ccard" href="https://instagram.com/thebndn" target="_blank" rel="noopener"><div class="ph" style="background-image:url(assets/chess.jpg)"></div><div><b>إنستغرام</b><span class="ltr">@thebndn</span></div><span class="go">←</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ACCOUNT CONCEPT -->
+<section class="s" id="account" style="padding-top:10px">
+  <div class="wrap acc">
+    <div class="sh"><span class="concept">تصوّر مبدئي · غير مفعّل بعد</span><h2>حسابي</h2><p>مكان واحد تلاقين بيه برامجكِ وكتيّباتكِ، ورمز الوصول، ووين وصلتِ بالقراءة.</p></div>
+    <div>
+      <div class="phone">
+        <div class="ah velvet"><div><span>أهلاً بكِ</span><b>حسابي في بندن</b></div><div class="av">ب</div></div>
+        <div class="ab">
+          <div class="lbl">كتيّباتي</div>
+          <div class="item"><img src="assets/cover.webp" alt=""><div class="t"><b>كورس فنّ الفراغ</b><span>أنجزتِ <span class="ltr">30%</span></span><div class="bar"><i></i></div></div><a class="mini" href="booklet/index.html">أكملي الآن</a></div>
+          <div class="lbl">برامجي</div>
+          <div class="item"><div class="ic">وتيرة</div><div class="t"><b>وتيرة أنسيات</b><span>الدفعة <span class="ltr">1</span> من <span class="ltr">2</span></span></div></div>
+          <div class="codebox">رمز الوصول يصلكِ على الإيميل، ويشتغل على جهازين كحد أقصى.</div>
+        </div>
+      </div>
+      <div class="ex">الأرقام والبيانات هنا مثال توضيحي فقط</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="s" id="faq" style="padding-top:10px">
+  <div class="wrap">
+    <div class="sh"><div class="k">الأسئلة</div><h2>عندكِ سؤال؟</h2></div>
+    <div class="faq">
+      <details open><summary>شلون أوصل للكتيّب بعد الشراء؟</summary><p>يوصلكِ رمز شخصي على إيميلكِ، تدخلينه بصفحة الكتيّب. الرمز يشتغل على جهازين كحد أقصى. إذا ما وصلكِ الإيميل، سجّلي رقمكِ على الواتساب ونرسله لكِ هناك.</p></details>
+      <details><summary>شنو الفرق بين النسخة المجانية والكاملة؟</summary><p>النسخة المجانية بـ <span class="ltr">$0</span> تخليكِ تجربين، والنسخة الكاملة <span class="ltr">43</span> صفحة بسعر الإطلاق <span class="ltr">$14</span> بدل <span class="ltr">$19</span>.</p></details>
+      <details><summary>شلون أسجّل بالبرامج؟</summary><p>من زر التسجيل بكل برنامج، تفتح لكِ استمارة التسجيل الخاصة بيه.</p></details>
+      <details><summary>وتيرة أنسيات أگدر أدفعها على مرتين؟</summary><p>إي، <span class="ltr">$69</span> على دفعتين شهريتين.</p></details>
+      <details><summary>واجهتني مشكلة بالكتيّب أو الدفع</summary><p>راسلينا على <a href="mailto:thebndn@mail.grokbot.com" class="ltr">thebndn@mail.grokbot.com</a> أو واتساب <a href="https://wa.me/9647892957772" class="ltr">+964 789 295 7772</a>.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- END -->
+<section class="end velvet">
+  <div class="lace"></div>
+  <div class="wrap">
+    <span class="logo" style="height:56px;color:var(--cream)"></span>
+    <h2>إلى كل من أبطأت لترى.</h2>
+    <p>خذي خطوتكِ الأولى ويانا</p>
+    <div class="ctas" style="margin:0 auto">
+      <a class="btn cream" href="#programs">اشتركي</a>
+      <a class="btn glass" href="#booklet">تصفّحي الكتيّب</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo"></span>
+    <div class="flinks">
+      <a href="#programs">البرامج</a><a href="#booklet">الكتيّب</a><a href="https://thebndn.thewayl.com/" target="_blank">المتجر</a><a href="https://ehdaash.com/@bndn" target="_blank">النشرة الأحدية</a><a href="https://chat.whatsapp.com/CQlfldqnIbUALMXve7nvPB?mode=gi_t" target="_blank">واتساب</a><a href="https://instagram.com/thebndn" target="_blank">إنستغرام</a><a href="#faq">الأسئلة</a>
+    </div>
+    <div class="support">
+      <b>الدعم</b>
+      <span>مشكلة بالكتيّب أو الدفع أو أي شي ثاني؟</span>
+      <a href="mailto:thebndn@mail.grokbot.com" class="ltr">thebndn@mail.grokbot.com</a>
+      <a href="https://wa.me/9647892957772" class="ltr">WhatsApp +964 789 295 7772</a>
+    </div>
+    <div class="copy">بندن · <span class="ltr">2026</span></div>
+  </div>
+</footer>
+<style>
+.fxwrap{margin:8px 0 4px;text-align:center}
+.fxbtn{font:inherit;font-size:14px;min-height:44px;padding:0 18px;border-radius:999px;color:#f8ede5;background:rgba(248,237,229,.12);border:1px solid rgba(248,237,229,.45);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);cursor:pointer}
+.fxbtn:active{transform:scale(.97)}
+.fxov{position:fixed;inset:0;background:rgba(40,6,8,.45);z-index:999;display:none;align-items:flex-end;justify-content:center}
+.fxov.on{display:flex}
+.fxsheet{width:100%;max-width:520px;direction:rtl;font-family:'IBM Plex Sans Arabic',sans-serif;color:#591114;background:rgba(248,237,229,.78);backdrop-filter:blur(18px) saturate(1.3);-webkit-backdrop-filter:blur(18px) saturate(1.3);border:1px solid rgba(255,255,255,.6);border-radius:26px 26px 0 0;padding:14px 22px calc(22px + env(safe-area-inset-bottom));box-shadow:0 -10px 40px rgba(89,17,20,.3);text-align:center;animation:fxup .28s ease}
+@keyframes fxup{from{transform:translateY(40px);opacity:0}}
+.fxsheet .grab{width:44px;height:5px;border-radius:9px;background:#dfc1ba;margin:0 auto 12px}
+.fxsheet h4{margin:0;font-size:15px;font-weight:500;opacity:.8}
+.fxsheet .fxamt{font-size:40px;font-weight:600;margin:6px 0 2px;direction:ltr}
+.fxsheet .fxsub{font-size:13.5px;opacity:.75;direction:ltr}
+.fxsheet label{display:block;font-size:13.5px;margin:16px 0 6px}
+.fxsheet select{font:inherit;width:100%;min-height:48px;border-radius:14px;border:1px solid #dfc1ba;background:rgba(255,255,255,.7);color:#591114;padding:0 14px;font-size:15px}
+.fxsheet .fxnote{font-size:12.5px;margin:14px 0 4px;opacity:.8}
+.fxsheet .fxclose{font:inherit;margin-top:10px;min-height:46px;width:100%;border-radius:999px;border:0;background:#591114;color:#f8ede5;font-size:15px}
+@media(min-width:700px){.fxov{align-items:center}.fxsheet{border-radius:26px;max-width:420px}}
+</style>
+<script>
+(function(){
+const FALLBACK={USD:1,IQD:1310,SAR:3.75,AED:3.6725,KWD:0.307,QAR:3.64,BHD:0.376,OMR:0.3845,JOD:0.709,EGP:48.5,TRY:41,EUR:0.86,GBP:0.75};
+const NAMES={USD:'دولار أمريكي',IQD:'دينار عراقي',SAR:'ريال سعودي',AED:'درهم إماراتي',KWD:'دينار كويتي',QAR:'ريال قطري',BHD:'دينار بحريني',OMR:'ريال عماني',JOD:'دينار أردني',EGP:'جنيه مصري',TRY:'ليرة تركية',EUR:'يورو',GBP:'جنيه إسترليني'};
+const TZ={'Asia/Baghdad':'IQD','Asia/Riyadh':'SAR','Asia/Dubai':'AED','Asia/Kuwait':'KWD','Asia/Qatar':'QAR','Asia/Bahrain':'BHD','Asia/Muscat':'OMR','Asia/Amman':'JOD','Africa/Cairo':'EGP','Europe/Istanbul':'TRY','Europe/London':'GBP'};
+const RG={IQ:'IQD',SA:'SAR',AE:'AED',KW:'KWD',QA:'QAR',BH:'BHD',OM:'OMR',JO:'JOD',EG:'EGP',TR:'TRY',GB:'GBP',US:'USD',DE:'EUR',FR:'EUR',NL:'EUR',IT:'EUR',ES:'EUR'};
+let rates=FALLBACK,live=false;
+try{const c=JSON.parse(localStorage.getItem('bndn_fx')||'null');if(c&&Date.now()-c.t<12*36e5){rates=c.r;live=true}}catch(e){}
+if(!live)fetch('https://open.er-api.com/v6/latest/USD').then(r=>r.json()).then(j=>{if(j.result==='success'){rates=j.rates;live=true;localStorage.setItem('bndn_fx',JSON.stringify({t:Date.now(),r:j.rates}));render()}}).catch(()=>{});
+function detect(){let tz='';try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone}catch(e){}
+ if(TZ[tz])return TZ[tz];if(tz.startsWith('Europe/'))return 'EUR';
+ const m=(navigator.language||'').match(/-([A-Z]{2})/);return (m&&RG[m[1]])||'USD'}
+function nice(v,c){let n;if(v>=10000)n=Math.round(v/250)*250;else if(v>=1000)n=Math.round(v/50)*50;else if(v>=100)n=Math.round(v);else if(['KWD','BHD','OMR','JOD'].includes(c))n=Math.round(v*10)/10;else n=Math.round(v);
+ return n.toLocaleString('en-US',{maximumFractionDigits:1})}
+const ov=document.createElement('div');ov.className='fxov';
+ov.innerHTML='<div class="fxsheet" role="dialog" aria-modal="true"><div class="grab"></div><h4 id="fxl"></h4><div class="fxamt" id="fxa"></div><div class="fxsub" id="fxs"></div><label for="fxc">اختاري عملة ثانية</label><select id="fxc">'+Object.keys(NAMES).map(k=>'<option value="'+k+'">'+NAMES[k]+' ('+k+')</option>').join('')+'</select><p class="fxnote">السعر تقريبي، والدفع يكون بالدولار</p><button class="fxclose" type="button">تمام</button></div>';
+document.body.appendChild(ov);
+let usd=14,cur=detect();const sel=ov.querySelector('#fxc');
+function render(){const r=rates[cur]||FALLBACK[cur];ov.querySelector('#fxa').textContent=nice(usd*r,cur)+' '+cur;ov.querySelector('#fxs').textContent='≈ $'+usd+' USD';}
+document.addEventListener('click',e=>{const b=e.target.closest('.fxbtn');if(!b)return;usd=+b.dataset.usd;ov.querySelector('#fxl').textContent=b.dataset.label+' · '+NAMES[cur];sel.value=cur;render();ov.classList.add('on')});
+sel.onchange=()=>{cur=sel.value;ov.querySelector('#fxl').textContent=ov.querySelector('#fxl').textContent.split(' · ')[0]+' · '+NAMES[cur];render()};
+ov.addEventListener('click',e=>{if(e.target===ov||e.target.classList.contains('fxclose'))ov.classList.remove('on')});
+})();
+</script>
+</body>
+</html>

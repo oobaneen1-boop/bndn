@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f8ede5">
+<link rel="icon" href="data:,">
+<link rel="preload" href="pages/p01.webp" as="image">
+<title>تصفّحي «كورس فن الفراغ» · بندن</title>
+<style>
+@font-face{font-family:"IBM Plex Sans Arabic";src:url(fonts/IBMPlexSansArabic-Light.ttf) format("truetype");font-weight:300;font-display:swap}
+@font-face{font-family:"IBM Plex Sans Arabic";src:url(fonts/IBMPlexSansArabic-Regular.ttf) format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:"IBM Plex Sans Arabic";src:url(fonts/IBMPlexSansArabic-Medium.ttf) format("truetype");font-weight:500;font-display:swap}
+@font-face{font-family:"IBM Plex Sans Arabic";src:url(fonts/IBMPlexSansArabic-SemiBold.ttf) format("truetype");font-weight:600;font-display:swap}
+:root{--cream:#f8ede5;--rose:#dfc1ba;--wine:#591114;--wine2:#7a2226;--ink:#3b0b0d}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;overflow:hidden}
+body{font-family:"IBM Plex Sans Arabic",sans-serif;color:var(--wine);background:
+  radial-gradient(120% 80% at 50% 0%,#fff7f1 0%,var(--cream) 55%,#f1dfd6 100%);
+  min-height:100dvh;display:flex;flex-direction:column;align-items:center;
+  padding:max(14px,env(safe-area-inset-top)) max(14px,env(safe-area-inset-right)) max(14px,env(safe-area-inset-bottom)) max(14px,env(safe-area-inset-left));
+  -webkit-font-smoothing:antialiased;user-select:none;-webkit-user-select:none}
+.logo{display:block;width:84px;aspect-ratio:1027.34/501.85;background:var(--wine);
+  -webkit-mask:url(bndn-logo-outlined.svg) center/contain no-repeat;mask:url(bndn-logo-outlined.svg) center/contain no-repeat}
+header{width:100%;max-width:1100px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex:none}
+.tag{font-size:12px;font-weight:500;letter-spacing:.2px;padding:6px 12px;border:1px solid var(--rose);border-radius:99px;background:#fffaf6aa}
+.intro{text-align:center;margin:10px 0 6px;flex:none}
+.intro h1{font-size:clamp(20px,4.6vw,30px);font-weight:600;line-height:1.3}
+.intro p{font-size:clamp(13px,3.2vw,15px);font-weight:400;opacity:.78;margin-top:2px}
+#stage{flex:1 1 auto;width:100%;display:flex;align-items:center;justify-content:center;min-height:0;position:relative}
+#bookWrap{position:relative}
+#bookWrap::before{content:"";position:absolute;inset:6px 4px 0;border-radius:4px;box-shadow:0 22px 38px rgba(89,17,20,.20),0 4px 10px rgba(89,17,20,.12);pointer-events:none}
+#book{margin:0 auto;touch-action:none;-webkit-user-select:none}
+.stf__item{will-change:transform;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+#stage.loading #bookWrap{opacity:0}#bookWrap{transition:opacity .5s}
+.loader{position:absolute;font-size:13px;opacity:.7}#stage:not(.loading) .loader{display:none}
+.page{background:#f8ede5;overflow:hidden}
+.page .pg{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;-webkit-user-drag:none}
+.page .shade{position:absolute;inset:0;pointer-events:none}
+.page.--left .shade{background:linear-gradient(to left,rgba(60,10,12,.16),rgba(60,10,12,0) 7%)}
+.page.--right .shade{background:linear-gradient(to right,rgba(60,10,12,.16),rgba(60,10,12,0) 7%)}
+.badge{position:absolute;bottom:2.2%;left:50%;transform:translateX(-50%);font-size:9px;font-weight:500;color:var(--wine);background:#f8ede5e6;border:1px solid var(--rose);padding:1px 8px;border-radius:99px;opacity:.85;white-space:nowrap}
+.hint{position:absolute;bottom:-4px;left:50%;transform:translateX(-50%);font-size:12px;opacity:.7;white-space:nowrap;transition:opacity .6s}
+.controls{flex:none;display:flex;align-items:center;justify-content:center;gap:14px;margin-top:14px;width:100%;max-width:520px}
+.btn{width:46px;height:46px;border-radius:50%;border:1px solid var(--rose);background:#fffaf6;color:var(--wine);display:grid;place-items:center;cursor:pointer;transition:transform .2s,background .2s,opacity .2s;flex:none}
+.btn:hover{background:#fff}.btn:active{transform:scale(.94)}.btn[disabled]{opacity:.35;pointer-events:none}
+.btn svg{width:20px;height:20px}
+.prog{flex:1;display:flex;flex-direction:column;gap:6px;align-items:center;min-width:0}
+.bar{width:100%;height:3px;border-radius:3px;background:var(--rose);overflow:hidden}
+.bar i{display:block;height:100%;width:10%;background:var(--wine);margin-inline-start:0;border-radius:3px;transition:width .6s cubic-bezier(.2,.7,.2,1)}
+.count{font-size:12px;font-weight:500;font-variant-numeric:tabular-nums;direction:ltr}
+.snd{width:38px;height:38px}
+.snd svg{width:17px;height:17px}
+.buyline{flex:none;margin-top:10px;font-size:13px;display:flex;gap:10px;align-items:center;justify-content:center;flex-wrap:wrap}
+.buyline a{color:var(--wine);font-weight:600;text-decoration:none;border-bottom:1px solid var(--wine)}
+.buyline s{opacity:.55}
+/* end card */
+#end{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:max(18px,env(safe-area-inset-top)) 18px max(18px,env(safe-area-inset-bottom));
+  background:rgba(59,11,13,.38);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);opacity:0;pointer-events:none;transition:opacity .45s}
+#end.on{opacity:1;pointer-events:auto}
+.card{width:100%;max-width:420px;max-height:100%;overflow:auto;background:linear-gradient(180deg,rgba(40,4,6,.18),rgba(40,4,6,.30)),var(--wine) url(img/velvet.jpg) center/cover;color:var(--cream);border-radius:24px;padding:44px 24px 40px;text-align:center;position:relative;
+  box-shadow:0 30px 60px rgba(40,6,8,.45);border:1px solid #7a2a2e;transform:translateY(24px) scale(.97);transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+#end.on .card{transform:none}
+.card::before{content:"";position:absolute;inset:30px 8px;border:1px solid rgba(223,193,186,.45);border-radius:18px;pointer-events:none}
+.card .lace{position:absolute;left:0;right:0;height:26px;background:url(img/lace-cream.png) repeat-x center/auto 26px;opacity:.85;pointer-events:none}.card .lace.t{top:0}.card .lace.b{bottom:0;transform:scaleY(-1)}
+.card h2,.card p,.card .or{text-shadow:0 1px 8px rgba(30,2,4,.45)}
+.card .logo{margin:0 auto 14px;width:92px;background:var(--cream)}
+.card h2{font-size:21px;font-weight:600;line-height:1.5}
+.card .free{margin:12px auto 4px;font-size:16px;line-height:1.7}
+.card .free b{font-weight:600;display:inline-block;background:var(--cream);color:var(--wine);padding:0 10px;border-radius:8px;direction:ltr}
+.card .q{font-size:15px;opacity:.85;margin-bottom:18px}
+.cta{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:52px;border-radius:14px;font:inherit;font-size:16px;font-weight:600;text-decoration:none;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.cta:active{transform:scale(.98)}
+.cta.primary{background:var(--cream);color:var(--wine);box-shadow:0 10px 22px rgba(20,2,3,.35)}
+.cta.secondary{background:transparent;color:var(--cream);border:1.5px solid var(--cream);flex-direction:column;gap:2px;padding:10px}
+.or{display:flex;align-items:center;gap:10px;margin:14px 0;font-size:12px;opacity:.6}
+.or{opacity:.75}.or::before,.or::after{content:"";flex:1;height:1px;background:var(--rose);opacity:.45}
+.price{font-size:13px;font-weight:500;direction:ltr;display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.price s{opacity:.5;font-weight:400}
+.save{display:inline-block;margin-top:10px;font-size:12px;background:var(--rose);color:var(--wine);font-weight:500;padding:3px 12px;border-radius:99px}
+.again{margin-top:14px;background:none;border:0;font:inherit;font-size:13px;color:var(--cream);opacity:.8;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.x{position:absolute;top:34px;left:16px;width:34px;height:34px;border-radius:50%;border:1px solid rgba(223,193,186,.5);background:rgba(248,237,229,.08);color:var(--cream);cursor:pointer;display:grid;place-items:center;z-index:2}
+@media (max-height:620px){.intro p{display:none}.buyline{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <span class="logo" role="img" aria-label="بندن"></span>
+  <span class="tag">معاينة من النسخة الكاملة</span>
+</header>
+<div class="intro">
+  <h1>كورس فن الفراغ</h1>
+  <p>قلّبي صفحات من الكتيّب على راحتج قبل ما تطلبينه 🤍</p>
+</div>
+<div id="stage" class="loading"><span class="loader">لحظة، دا نجهّز الصفحات…</span><div id="bookWrap"><div id="book"></div></div></div>
+<div class="controls">
+  <button class="btn" id="prevBtn" aria-label="الصفحة السابقة"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+  <div class="prog"><div class="bar"><i id="barFill"></i></div><span class="count" id="count">1 / 10</span></div>
+  <button class="btn" id="nextBtn" aria-label="الصفحة التالية"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+  <button class="btn snd" id="sndBtn" aria-label="صوت تقليب الورق" aria-pressed="false" title="صوت الورق"></button>
+</div>
+<div class="buyline"><span>سعر الإطلاق <b dir="ltr">19,000 IQD · $14</b> <s dir="ltr">25,000 IQD · $19</s></span><a href="https://thebndn.thewayl.com/" target="_blank" rel="noopener">اطلبي الكتيّب الآن</a></div>
+
+<div id="end" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="endTitle">
+  <div class="card">
+    <span class="lace t"></span><span class="lace b"></span>
+    <button class="x" id="closeEnd" aria-label="إغلاق"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <span class="logo" role="img" aria-label="بندن"></span>
+    <h2 id="endTitle">وصلتِ لآخر المعاينة 🤍</h2>
+    <p class="free">اكو نسخة مجانية من الكتيّب<br>احصلي عليها الآن بـ <b>$0</b></p>
+    <p class="q">تحبين تجربينها هسه؟</p>
+    <a class="cta primary" href="https://oobaneen1-boop.github.io/bndn/faragh/" target="_blank" rel="noopener">إي، أريد النسخة المجانية</a>
+    <div class="or">أو تبدين بالكاملة مباشرة</div>
+    <a class="cta secondary" href="https://thebndn.thewayl.com/" target="_blank" rel="noopener">
+      <span>اطلبي النسخة الكاملة</span>
+      <span class="price"><span>19,000 IQD · $14</span><s>25,000 IQD · $19</s></span>
+    </a>
+    <span class="save">توفرين الآن 6,000 دينار</span><br>
+    <button class="again" id="again">أعيدي التصفح من البداية</button>
+  </div>
+</div>
+
+<script src="vendor/page-flip.browser.js"></script>
+<script>
+(function(){
+  // reading order (RTL). Library is LTR, so we feed pages reversed and start at the end.
+  var READ = ["p01","p02","p03","p04","p05","p06","p07","p08","p09","p10"];
+  var N = READ.length, RATIO = 1273/900;
+  var bookEl = document.getElementById('book'), wrap = document.getElementById('bookWrap');
+  var pf = null, portrait = false, readIdx = 0, ended = false, soundOn = true, actx = null, played = false, bufs = [], lastV = -1;
+
+  function buildPages(){
+    bookEl.innerHTML = '';
+    for (var i = N-1; i >= 0; i--){
+      var d = document.createElement('div');
+      d.className = 'page';
+      if (i === 0 || i === N-1) d.setAttribute('data-density','hard');
+      d.innerHTML = '<img class="pg" src="pages/'+READ[i]+'.webp" alt="" draggable="false" decoding="async"><div class="shade"></div>' +
+        ((i>0 && i<N-1) ? '<span class="badge">معاينة · '+(i+1)+'</span>' : '');
+      bookEl.appendChild(d);
+    }
+  }
+  function layout(){
+    var st = document.getElementById('stage').getBoundingClientRect();
+    var aw = st.width, ah = Math.max(220, st.height - 10);
+    var pwH = ah / RATIO;
+    var spread = aw >= 600 && Math.min(pwH, aw/2) >= 230;
+    var pw = spread ? Math.min(pwH, (aw-8)/2, 560) : Math.min(pwH, aw, 470);
+    pw = Math.floor(pw);
+    return {spread:spread, w:pw, h:Math.floor(pw*RATIO)};
+  }
+  function init(keepIdx){
+    var L = layout(); portrait = !L.spread;
+    if (pf){ try{pf.destroy();}catch(e){} wrap.innerHTML='<div id="book"></div>'; bookEl = document.getElementById('book'); }
+    buildPages();
+    bookEl.style.width = (L.spread ? L.w*2 : L.w) + 'px';
+    bookEl.style.height = L.h + 'px';
+    pf = new St.PageFlip(bookEl, {
+      width:L.w, height:L.h, size:'fixed', showCover:true, usePortrait:portrait,
+      startPage: N-1-(keepIdx||0), drawShadow:true, maxShadowOpacity:0.42,
+      flippingTime:1000, mobileScrollSupport:false, swipeDistance:18,
+      showPageCorners:!matchMedia('(hover:none)').matches, disableFlipByClick:false, autoSize:false
+    });
+    pf.loadFromHTML(bookEl.querySelectorAll('.page'));
+    pf.on('flip', function(e){ readIdx = N-1-e.data; update(); });
+    pf.on('changeState', function(e){ if ((e.data === 'flipping' || e.data === 'user_fold') && !played){ played = true; rustle(); } if (e.data === 'read') played = false; });
+    readIdx = keepIdx||0; update();
+  }
+  function update(){
+    var shown = readIdx+1;
+    var label;
+    if (!portrait && readIdx>0 && readIdx<N-1){ var a = readIdx%2? readIdx : readIdx-1; label = (a+1)+'–'+Math.min(a+2,N); shown=Math.min(a+2,N);} else label = String(readIdx+1);
+    document.getElementById('count').textContent = label + ' / ' + N;
+    document.getElementById('barFill').style.width = (shown/N*100)+'%';
+    document.getElementById('prevBtn').disabled = readIdx === 0;
+    document.getElementById('nextBtn').disabled = false;
+    if (readIdx >= N-1 && !ended){ ended = true; setTimeout(openEnd, 650); }
+  }
+  function kick(){ if (!played){ played = true; rustle(); } }
+  // swipes/taps: sound at the very first touch on a page edge that can turn (no waiting for the library)
+  wrap.addEventListener('pointerdown', function(e){
+    var r = document.getElementById('book').getBoundingClientRect();
+    var leftHalf = (e.clientX - r.left) < r.width/2;
+    if ((leftHalf && readIdx < N-1) || (!leftHalf && readIdx > 0)) kick();
+  }, {capture:true, passive:true});
+  function next(){ if (readIdx >= N-1) return openEnd(); kick(); pf.flipPrev('bottom'); }
+  function prev(){ if (readIdx <= 0) return; kick(); pf.flipNext('bottom'); }
+  function openEnd(){ var e=document.getElementById('end'); e.classList.add('on'); e.setAttribute('aria-hidden','false'); }
+  function closeEnd(){ var e=document.getElementById('end'); e.classList.remove('on'); e.setAttribute('aria-hidden','true'); }
+  document.getElementById('nextBtn').onclick = next;
+  document.getElementById('prevBtn').onclick = prev;
+  document.getElementById('closeEnd').onclick = closeEnd;
+  document.getElementById('end').addEventListener('click', function(e){ if(e.target.id==='end') closeEnd(); });
+  document.getElementById('again').onclick = function(){ closeEnd(); ended=false; init(0); };
+  document.addEventListener('keydown', function(e){
+    if (e.key==='ArrowLeft') next(); else if (e.key==='ArrowRight') prev(); else if (e.key==='Escape') closeEnd();
+  });
+
+  // real recorded page-turn sound (CC0, see CREDITS.txt). ON by default; unlocked on first gesture (iOS).
+  var ON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16.5 8.5a5 5 0 010 7M19 6a8.5 8.5 0 010 12"/></svg>';
+  var OFF='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M17 9l5 6M22 9l-5 6"/></svg>';
+  var sb = document.getElementById('sndBtn');
+  try { if (localStorage.getItem('bndn-flip-sound') === 'off') soundOn = false; } catch(e){}
+  function paintSnd(){ sb.innerHTML = soundOn?ON:OFF; sb.setAttribute('aria-pressed',soundOn); }
+  paintSnd();
+  var AC = window.AudioContext || window.webkitAudioContext;
+  var ext = (new Audio()).canPlayType('audio/mpeg') ? 'mp3' : 'ogg';
+  var files = [1,2,3].map(function(n){ return 'audio/page-turn-'+n+'.'+ext; });
+  var raw = files.map(function(f){ return fetch(f).then(function(r){ return r.arrayBuffer(); }).catch(function(){ return null; }); });
+  function ensureCtx(){
+    if (!AC) return;
+    if (!actx){ try { actx = new AC({latencyHint:'interactive'}); } catch(e){ actx = new AC(); } actx.__g = actx.createGain(); actx.__g.gain.value = .55; actx.__g.connect(actx.destination);
+      raw.forEach(function(p,i){ p.then(function(ab){ if(!ab) return; actx.decodeAudioData(ab.slice(0), function(b){ var d=b.getChannelData(0), k=0; while(k<d.length && Math.abs(d[k])<1e-3) k++; b.__off = k/b.sampleRate; bufs[i]=b; }, function(){}); }); }); }
+    if (actx.state === 'suspended') actx.resume();
+  }
+  function unlock(){ ensureCtx(); if (actx){ var s0 = actx.createBufferSource(); s0.buffer = actx.createBuffer(1,1,22050); s0.connect(actx.destination); s0.start(0); } }
+  ensureCtx(); // create (suspended) + pre-decode buffers at load; resumed on first gesture
+  ['pointerdown','touchstart','keydown','mousedown'].forEach(function(ev){ addEventListener(ev, unlock, {capture:true, passive:true}); });
+  sb.onclick = function(){ soundOn = !soundOn; paintSnd(); try{ localStorage.setItem('bndn-flip-sound', soundOn?'on':'off'); }catch(e){} if (soundOn){ ensureCtx(); rustle(); } };
+  function rustle(){
+    if (!soundOn || !actx) return; if (actx.state === 'suspended') actx.resume();
+    var avail = bufs.map(function(b,i){ return b ? i : -1; }).filter(function(i){ return i>=0 && i!==lastV; });
+    if (!avail.length) avail = bufs.map(function(b,i){ return b ? i : -1; }).filter(function(i){ return i>=0; });
+    if (!avail.length) return;
+    var v = avail[Math.floor(Math.random()*avail.length)]; lastV = v;
+    var src = actx.createBufferSource(); src.buffer = bufs[v];
+    var rate = 0.96 + Math.random()*0.08; src.playbackRate.value = rate;
+    (window.__sndlog = window.__sndlog || []).push({t:Date.now(), v:v, rate:rate});
+    src.connect(actx.__g); src.start(0, bufs[v].__off || 0);
+  }
+
+  var rt, lastW = innerWidth, lastH = innerHeight;
+  addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(function(){
+    if (Math.abs(innerWidth-lastW)<2 && Math.abs(innerHeight-lastH)<80) return; lastW=innerWidth; lastH=innerHeight; init(readIdx); }, 250); });
+  var pre = READ.map(function(id){ var im = new Image(); im.decoding = 'async'; im.src = 'pages/'+id+'.webp';
+    return (im.decode ? im.decode() : new Promise(function(r){ im.onload = r; })).catch(function(){}); });
+  var fontsReady = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+  Promise.all([fontsReady].concat(pre)).then(function(){ init(0); document.getElementById('stage').classList.remove('loading'); });
+  window.__pf = function(){ return pf; }; window.__next = next;
+})();
+</script>
+</body>
+</html>
