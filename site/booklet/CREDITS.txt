@@ -1,0 +1,24 @@
+Bandan · flipbook preview demo · credits & licenses
+
+Page-turn sound (audio/page-turn-1..3.mp3 / .ogg)
+  Source : "Book Flip Sounds" by Voltiment555, OpenGameArt.org
+           https://opengameart.org/content/book-flip-sounds  (BookFlip_SFX.zip, 13 WAV files)
+  License: CC0 1.0 Universal (public domain dedication)
+           https://creativecommons.org/publicdomain/zero/1.0/
+  Used   : BookFlip2.wav -> page-turn-1, BookFlip12.wav -> page-turn-2, BookFlip1.wav (from 0.34 s) -> page-turn-3
+           (chosen as the smoothest/softest clips with the swoosh early in the clip)
+  Edits  : mono 44.1 kHz, high-pass 120 Hz, 4-pole low-pass 4.5 kHz (soft, thick-paper tone),
+           cut exactly at the transient (0 ms pre-roll), 4 ms fade-in, raised-cosine fade over the last half,
+           max 0.55 s, quiet level (about -27 dBFS RMS, peak <= -9 dBFS), MP3 80 kbps + Ogg Vorbis q4.
+           Played via Web Audio at gain 0.55; encoder padding skipped at decode time.
+  (Attribution not required by CC0; credited as a courtesy.)
+
+Page-flip engine (vendor/page-flip.browser.js)
+  StPageFlip / page-flip 2.0.7 by Nodlik, MIT License (vendor/LICENSE)
+  https://github.com/Nodlik/StPageFlip
+  Local patch: flip path eased (ease-out cubic blended with sine in-out) instead of linear.
+
+Font: IBM Plex Sans Arabic, SIL Open Font License 1.1 (fonts/).
+Booklet pages: © Baneen · Bandan, rendered from madiha-v1/pdf/kors-fan-alfaragh-full.pdf (preview only).
+
+End-card background: velvet.jpg and lace-cream.png from the booklet's own web assets (final/web/assets/img).
