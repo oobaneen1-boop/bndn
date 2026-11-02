@@ -346,9 +346,9 @@ var note=$("#note");
 function say(el,t){el.textContent=t}
 function sendWa(el){
   if(!nDone()){say(el,"اكتبي شيئاً أولاً، ثم أرسليه 🤍");return}
-  var u="https://wa.me/?text="+encodeURIComponent(compose());
+  var u="https://wa.me/9647892957772?text="+encodeURIComponent(compose());
   var w=window.open(u,"_blank");if(!w)location.href=u;
-  say(el,"اختاري محادثتي من واتساب وأرسلي.");M.sentWa=new Date().toISOString();lsSet(META,M)}
+  say(el,"انفتحت محادثتي في واتساب، اضغطي إرسال 🤍");M.sentWa=new Date().toISOString();lsSet(META,M)}
 function copyAll(el){
   var t=compose();
   function fallback(){var ta=document.createElement("textarea");ta.value=t;ta.setAttribute("readonly","");ta.style.cssText="position:fixed;top:0;left:0;opacity:0;font-size:16px";document.body.appendChild(ta);ta.select();ta.setSelectionRange(0,t.length);
