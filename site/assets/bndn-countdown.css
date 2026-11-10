@@ -1,0 +1,33 @@
+/* Bandan · booklet launch-price countdown popup */
+.bd-cd{position:fixed;inset:0;z-index:1100;display:none;align-items:center;justify-content:center;padding:18px;font-family:"IBM Plex Sans Arabic",sans-serif;direction:rtl;user-select:text;-webkit-user-select:text}
+.bd-cd.open{display:flex}
+.bd-cd .bdc-shade{position:absolute;inset:0;background:rgba(30,0,4,.55);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);animation:bdFade .35s ease both}
+.bd-cd .bdc-card{position:relative;width:min(100%,410px);max-height:calc(100dvh - 36px);overflow:auto;border-radius:28px;background:#f8ede5 url(/bndn/site/assets/paper.jpg) repeat;background-size:420px auto;color:#591114;box-shadow:0 30px 70px rgba(20,0,5,.45);border:1px solid rgba(223,193,186,.9);animation:bdRise .45s cubic-bezier(.2,.8,.2,1) both}
+.bd-cd .bdc-cover{position:relative;padding:52px 18px 0}
+.bd-cd .bdc-cover img{width:100%;height:auto;display:block;-webkit-mask:linear-gradient(#000 80%,transparent);mask:linear-gradient(#000 70%,transparent)}
+.bd-cd .bdc-mono{position:absolute;top:12px;right:20px;height:36px;width:auto;max-width:none}
+.bd-cd .bdc-x{position:absolute;top:12px;left:12px;z-index:2;width:40px;height:40px;border-radius:50%;border:1px solid rgba(89,17,20,.22);background:rgba(248,237,229,.85);color:#591114;font:300 24px/1 "IBM Plex Sans Arabic",sans-serif;cursor:pointer;display:grid;place-items:center}
+.bd-cd .bdc-body{padding:2px 24px 22px;text-align:center}
+.bd-cd .bdc-eyebrow{font-size:12.5px;letter-spacing:.04em;color:#8a4a4c;font-weight:400}
+.bd-cd .bdc-title{margin:2px 0 6px;font-weight:600;font-size:25px;line-height:1.4}
+.bd-cd .bdc-text{margin:0 auto 14px;max-width:32ch;font-size:15px;line-height:1.85;font-weight:300}
+.bd-cd .bdc-price{display:flex;align-items:baseline;justify-content:center;gap:12px;margin:0 0 14px}
+.bd-cd .bdc-now{font-size:24px;font-weight:600}
+.bd-cd .bdc-now small,.bd-cd .bdc-was small{font-size:13px;font-weight:400}
+.bd-cd .bdc-was{font-size:15px;color:#8a4a4c;text-decoration:line-through;text-decoration-thickness:1px;opacity:.8}
+.bd-cd .bdc-save{font-size:12.5px;border:1px solid rgba(89,17,20,.25);border-radius:999px;padding:1px 10px;font-weight:500}
+.bd-cd .bdc-timer{border-top:1px solid rgba(89,17,20,.14);border-bottom:1px solid rgba(89,17,20,.14);padding:12px 0 14px;margin:0 0 16px}
+.bd-cd .bdc-timer .bdc-lbl{font-size:13px;color:#8a4a4c;margin-bottom:8px}
+.bd-cd .bdc-units{display:flex;justify-content:center;gap:8px;direction:rtl}
+.bd-cd .bdc-u{width:66px;padding:8px 0 4px;border-radius:16px;background:rgba(223,193,186,.38);border:1px solid rgba(223,193,186,.95)}
+.bd-cd .bdc-u b{display:block;font-size:24px;font-weight:600;line-height:1.2;font-variant-numeric:tabular-nums}
+.bd-cd .bdc-u span{display:block;font-size:11.5px;color:#8a4a4c}
+.bd-cd .bdc-cta{display:flex;width:100%;align-items:center;justify-content:center;min-height:52px;border-radius:999px;background:#591114 url(/bndn/site/assets/velvet.jpg);background-size:240px auto;color:#f8ede5;text-decoration:none;font-weight:500;font-size:16.5px;box-shadow:0 8px 20px rgba(89,17,20,.28)}
+.bd-cd .bdc-later{margin-top:10px;background:none;border:0;color:#8a4a4c;font:400 13.5px "IBM Plex Sans Arabic",sans-serif;cursor:pointer;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(138,74,76,.4)}
+.bd-cd .bdc-after{margin:12px 0 0;font-size:12px;color:#8a4a4c;font-weight:300}
+@keyframes bdFade{from{opacity:0}}
+@keyframes bdRise{from{opacity:0;transform:translateY(14px) scale(.98)}}
+@media (prefers-reduced-motion:reduce){.bd-cd .bdc-shade,.bd-cd .bdc-card{animation:none}}
+.bd-cd .bdc-cover img{transform:none;border:0;border-radius:0;box-shadow:none;max-width:100%;aspect-ratio:auto;margin:0}
+.bd-cd .bdc-text,.bd-cd .bdc-title{padding:0}
+.bd-cd .bdc-mono{z-index:2}
