@@ -83,11 +83,15 @@ header{width:100%;max-width:1100px;display:flex;align-items:center;justify-conte
 @media (max-height:620px){.intro p{display:none}.buyline{display:none}}
 </style>
 <link rel="stylesheet" href="/bndn/site/assets/bndn-countdown.css">
+<link rel="stylesheet" href="/bndn/site/bd-lang/bd-lang.css">
 </head>
 <body>
 <header>
   <span class="logo" role="img" aria-label="بندن"></span>
-  <span class="tag">معاينة من النسخة الكاملة</span>
+  <div class="hd-end">
+    <div data-bd-lang></div>
+    <span class="tag">معاينة من النسخة الكاملة</span>
+  </div>
 </header>
 <div class="intro">
   <h1>كورس فن الفراغ</h1>
@@ -241,5 +245,6 @@ header{width:100%;max-width:1100px;display:flex;align-items:center;justify-conte
 })();
 </script>
 <script src="/bndn/site/assets/bndn-countdown.js"></script>
+<script src="/bndn/site/bd-lang/bd-lang.js" defer></script>
 </body>
 </html>
