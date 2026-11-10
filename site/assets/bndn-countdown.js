@@ -8,6 +8,8 @@
  *  - ?cd=1 forces it open (test override). It does not override the end date.
  *  - Ends 31 Dec 2026 23:59:59 Asia/Baghdad (UTC+3). After that it never appears.
  *  - CTA → Wayl product page (not WhatsApp).
+ *  - Each time unit is a paper flip card; numbers fold down like a page when they change.
+ *    prefers-reduced-motion → the number just changes, no flip.
  */
 (function(){
   var END = new Date('2026-12-31T23:59:59+03:00').getTime();
@@ -34,11 +36,11 @@
           '<span class="bdc-was">29,000 <small>دينار</small></span>' +
           '<span class="bdc-save">وفّري 8,000</span></div>' +
         '<div class="bdc-timer"><div class="bdc-lbl">سعر الإطلاق ينتهي بعد</div><div class="bdc-units">' +
-          '<div class="bdc-u"><b data-u="d">0</b><span>أيام</span></div>' +
-          '<div class="bdc-u"><b data-u="h">00</b><span>ساعات</span></div>' +
-          '<div class="bdc-u"><b data-u="m">00</b><span>دقائق</span></div>' +
-          '<div class="bdc-u"><b data-u="s">00</b><span>ثوانٍ</span></div>' +
-        '</div></div>' +
+          '<div class="bdc-u"><b class="bdc-flip" data-u="d" aria-hidden="true"></b><span>أيام</span></div>' +
+          '<div class="bdc-u"><b class="bdc-flip" data-u="h" aria-hidden="true"></b><span>ساعات</span></div>' +
+          '<div class="bdc-u"><b class="bdc-flip" data-u="m" aria-hidden="true"></b><span>دقائق</span></div>' +
+          '<div class="bdc-u"><b class="bdc-flip" data-u="s" aria-hidden="true"></b><span>ثوانٍ</span></div>' +
+        '</div><span class="bdc-sr" aria-live="off" data-sr></span></div>' +
         '<a class="bdc-cta" href="'+URL+'" target="_blank" rel="noopener">اطلبي الكتيّب الآن</a>' +
         '<button class="bdc-later" type="button" data-close>ربما لاحقاً</button>' +
         '<div class="bdc-after">بعد 31 كانون الأول يرجع السعر 29,000 دينار</div>' +
@@ -48,14 +50,32 @@
 
   var q = function(u){ return el.querySelector('[data-u="'+u+'"]'); };
   var D=q('d'),H=q('h'),M=q('m'),S=q('s'), timer;
+  var SR = el.querySelector('[data-sr]');
+  var RM = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : {matches:false};
+  // Paper flip card: static top (new) + static bottom (old) + two moving leaves.
+  function half(cls, v){ var s=document.createElement('span'); s.className='bdc-h '+cls; var i=document.createElement('i'); i.textContent=v; s.appendChild(i); return s; }
+  function flip(card, v){
+    if (!card._t){ card._t=half('bdc-t',v); card._b=half('bdc-b',v); card.appendChild(card._t); card.appendChild(card._b); card._v=v; return; }
+    if (card._v === v) return;
+    var old = card._v; card._v = v;
+    if (card._lt){ card._lt.remove(); card._lb.remove(); card._lt=card._lb=null; }  // a change arrived mid-flip: finish instantly
+    card._t.firstChild.textContent = v;
+    if (RM.matches){ card._b.firstChild.textContent = v; return; }
+    card._b.firstChild.textContent = old;
+    var lt = half('bdc-lt bdc-t', old), lb = half('bdc-lb bdc-b', v);
+    card._lt = lt; card._lb = lb; card.classList.remove('bdc-turning'); void card.offsetWidth; card.classList.add('bdc-turning'); card.appendChild(lt); card.appendChild(lb);
+    lb.addEventListener('animationend', function(e){
+      if (e.target !== lb || e.animationName !== 'bdLeafBot' || card._lb !== lb) return;
+      card._b.firstChild.textContent = v; lt.remove(); lb.remove(); card._lt=card._lb=null; card.classList.remove('bdc-turning');
+    });
+  }
   function pad(n){ return (n<10?'0':'')+n; }
   function tick(){
     var t = Math.max(0, Math.floor((END - Date.now())/1000) + 1);  // +1 so 23:59:59 itself still counts
     if (Date.now() > END){ close(); return; }
-    D.textContent = Math.floor(t/86400);
-    H.textContent = pad(Math.floor(t%86400/3600));
-    M.textContent = pad(Math.floor(t%3600/60));
-    S.textContent = pad(t%60);
+    var d=Math.floor(t/86400), h=pad(Math.floor(t%86400/3600)), m=pad(Math.floor(t%3600/60)), s=pad(t%60);
+    flip(D, String(d)); flip(H, h); flip(M, m); flip(S, s);
+    SR.textContent = d+' أيام '+h+' ساعات '+m+' دقائق '+s+' ثوانٍ';
   }
   function close(){
     el.classList.remove('open'); clearInterval(timer);

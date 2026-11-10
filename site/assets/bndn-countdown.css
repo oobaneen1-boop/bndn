@@ -19,8 +19,7 @@
 .bd-cd .bdc-timer{border-top:1px solid rgba(89,17,20,.14);border-bottom:1px solid rgba(89,17,20,.14);padding:12px 0 14px;margin:0 0 16px}
 .bd-cd .bdc-timer .bdc-lbl{font-size:13px;color:#8a4a4c;margin-bottom:8px}
 .bd-cd .bdc-units{display:flex;justify-content:center;gap:8px;direction:rtl}
-.bd-cd .bdc-u{width:66px;padding:8px 0 4px;border-radius:16px;background:rgba(223,193,186,.38);border:1px solid rgba(223,193,186,.95)}
-.bd-cd .bdc-u b{display:block;font-size:24px;font-weight:600;line-height:1.2;font-variant-numeric:tabular-nums}
+.bd-cd .bdc-u{width:66px;padding:7px 0 4px;border-radius:16px;background:rgba(223,193,186,.38);border:1px solid rgba(223,193,186,.95)}
 .bd-cd .bdc-u span{display:block;font-size:11.5px;color:#8a4a4c}
 .bd-cd .bdc-cta{display:flex;width:100%;align-items:center;justify-content:center;min-height:52px;border-radius:999px;background:#591114 url(/bndn/site/assets/velvet.jpg);background-size:240px auto;color:#f8ede5;text-decoration:none;font-weight:500;font-size:16.5px;box-shadow:0 8px 20px rgba(89,17,20,.28)}
 .bd-cd .bdc-later{margin-top:10px;background:none;border:0;color:#8a4a4c;font:400 13.5px "IBM Plex Sans Arabic",sans-serif;cursor:pointer;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(138,74,76,.4)}
@@ -31,3 +30,31 @@
 .bd-cd .bdc-cover img{transform:none;border:0;border-radius:0;box-shadow:none;max-width:100%;aspect-ratio:auto;margin:0}
 .bd-cd .bdc-text,.bd-cd .bdc-title{padding:0}
 .bd-cd .bdc-mono{z-index:2}
+
+/* ── Paper flip digits ────────────────────────────────────────────────────
+   Each number is a small cream paper card folded across the middle.
+   When it changes, the top half of the old sheet folds down over the fold,
+   then the lower half of the new sheet settles into place with a tiny give. */
+.bd-cd .bdc-flip{position:relative;display:block;width:52px;height:40px;margin:0 auto 6px;perspective:240px;font-size:23px;font-weight:600;color:#591114;font-variant-numeric:tabular-nums;direction:ltr}
+.bd-cd .bdc-flip::before{content:"";position:absolute;left:3px;right:3px;bottom:-3px;height:40px;border-radius:8px;background:#ecd9cf;box-shadow:0 2px 4px rgba(89,17,20,.12)} /* sheet underneath: a paper pad, not a plastic card */
+.bd-cd .bdc-flip::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;margin-top:-.5px;background:linear-gradient(90deg,rgba(89,17,20,.08),rgba(89,17,20,.22) 50%,rgba(89,17,20,.08));z-index:6;pointer-events:none} /* the thin mid-fold */
+.bd-cd .bdc-u .bdc-h{display:block;font-size:inherit;color:inherit}
+.bd-cd .bdc-h{position:absolute;left:0;right:0;height:50%;overflow:hidden;background:#fbf3ec url(/bndn/site/assets/paper.jpg) repeat;background-size:300px auto;-webkit-backface-visibility:hidden;backface-visibility:hidden;border:1px solid rgba(223,193,186,.95)}
+.bd-cd .bdc-h i{display:block;height:40px;line-height:40px;text-align:center;font-style:normal}
+.bd-cd .bdc-t{top:0;border-bottom:0;border-radius:8px 8px 0 0;box-shadow:inset 0 -6px 8px -6px rgba(89,17,20,.10)}
+.bd-cd .bdc-b{bottom:0;border-top:0;border-radius:0 0 8px 8px;box-shadow:inset 0 6px 8px -6px rgba(89,17,20,.08)}
+.bd-cd .bdc-b i{margin-top:-20px}
+.bd-cd .bdc-lt,.bd-cd .bdc-lb{z-index:3}
+.bd-cd .bdc-lt{transform-origin:50% 100%;animation:bdLeafTop .34s cubic-bezier(.45,0,.75,.4) both}
+.bd-cd .bdc-lb{transform-origin:50% 0;transform:rotateX(90deg);animation:bdLeafBot .42s .32s cubic-bezier(.2,.7,.3,1) both}
+.bd-cd .bdc-lt::after,.bd-cd .bdc-lb::after{content:"";position:absolute;inset:0;pointer-events:none}
+.bd-cd .bdc-lt::after{background:linear-gradient(to bottom,rgba(89,17,20,0),rgba(89,17,20,.28));animation:bdShadeIn .34s ease-in both}
+.bd-cd .bdc-lb::after{background:linear-gradient(to top,rgba(89,17,20,0),rgba(89,17,20,.22));animation:bdShadeOut .42s .32s ease-out both}
+.bd-cd .bdc-turning .bdc-b:not(.bdc-lb)::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(89,17,20,.20),rgba(89,17,20,0) 85%);animation:bdCast .74s ease both;pointer-events:none} /* shadow the falling page casts on the sheet below */
+@keyframes bdCast{0%{opacity:0}45%{opacity:1}100%{opacity:0}}
+@keyframes bdLeafTop{from{transform:rotateX(0)}to{transform:rotateX(-90deg)}}
+@keyframes bdLeafBot{0%{transform:rotateX(90deg)}75%{transform:rotateX(-7deg)}100%{transform:rotateX(0)}}
+@keyframes bdShadeIn{from{opacity:0}to{opacity:1}}
+@keyframes bdShadeOut{from{opacity:1}to{opacity:0}}
+.bd-cd .bdc-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (prefers-reduced-motion:reduce){.bd-cd .bdc-lt,.bd-cd .bdc-lb{display:none}.bd-cd .bdc-turning .bdc-b::after{display:none}}
