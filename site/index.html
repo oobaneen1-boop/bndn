@@ -231,6 +231,7 @@ footer .logo{height:40px;color:var(--red)}
 }
 </style>
 <link rel="stylesheet" href="/bndn/site/assets/bndn-countdown.css">
+<link rel="stylesheet" href="/bndn/site/bd-lang/bd-lang.css">
 </head>
 <body>
 
@@ -240,8 +241,11 @@ footer .logo{height:40px;color:var(--red)}
     <nav class="desk">
       <a href="#programs">البرامج</a><a href="#booklet">الكتيّب</a><a href="#newsletter">النشرة</a><a href="#community">المجتمع</a><a href="#account">حسابي</a><a href="#faq">الأسئلة</a>
     </nav>
-    <a class="btn red h-cta" href="#programs">اشتركي</a>
-    <button class="burger" aria-label="القائمة" onclick="document.getElementById('dr').classList.add('open')"><span></span></button>
+    <div class="hd-end">
+      <div class="bd-lang-slot" data-bd-lang></div>
+      <a class="btn red h-cta" href="#programs">اشتركي</a>
+      <button class="burger" aria-label="القائمة" onclick="document.getElementById('dr').classList.add('open')"><span></span></button>
+    </div>
   </div>
 </header>
 
@@ -498,5 +502,6 @@ ov.addEventListener('click',e=>{if(e.target===ov||e.target.classList.contains('f
 })();
 </script>
 <script src="/bndn/site/assets/bndn-countdown.js"></script>
+<script src="/bndn/site/bd-lang/bd-lang.js" defer></script>
 </body>
 </html>

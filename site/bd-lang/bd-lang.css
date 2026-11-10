@@ -1,0 +1,77 @@
+/* Bandan language switcher · bd-lang v1 (preview, 2026-11-10)
+   Custom Bandan UI on top of Google Website Translator. Default language: Arabic. */
+:root{--bdl-red:#591114;--bdl-cream:#f8ede5;--bdl-rose:#dfc1ba;--bdl-line:rgba(89,17,20,.16);--bdl-muted:#8a4a4c}
+
+/* ---------- hide every piece of Google's own UI ---------- */
+#bd-gt-host,#google_translate_element{position:fixed!important;left:0!important;top:0!important;width:1px!important;height:1px!important;overflow:hidden!important;clip-path:inset(50%)!important;opacity:0!important;pointer-events:none!important}
+iframe.skiptranslate,.skiptranslate>iframe,.goog-te-banner-frame,.goog-te-menu-frame,.goog-te-balloon-frame,
+#goog-gt-tt,.goog-tooltip,.VIpgJd-ZVi9od-ORHb-OEVmcd,.VIpgJd-ZVi9od-aZ2wEe-wOHMyf,.VIpgJd-yAWNEb-L7lbkb,.goog-te-spinner-pos{display:none!important;visibility:hidden!important}
+html,body{top:0!important}
+body{position:static!important}
+.goog-text-highlight,.VIpgJd-yAWNEb-VIpgJd-fmcmS-sn54Q{background:none!important;box-shadow:none!important}
+font{font:inherit!important;color:inherit!important;background:none!important}
+
+/* ---------- slot inside an existing header ---------- */
+.bd-lang-slot{display:flex;align-items:center}
+.hd-end{display:flex;align-items:center;gap:10px}
+
+/* ---------- the button ---------- */
+.bdl-btn{display:inline-flex;align-items:center;gap:7px;height:44px;padding:0 14px 0 12px;border-radius:14px;border:1px solid var(--bdl-line);background:transparent;color:var(--bdl-red);font:500 14.5px/1 "IBM Plex Sans Arabic",system-ui,sans-serif;cursor:pointer;white-space:nowrap;transition:background .2s,border-color .2s}
+.bdl-btn:hover,.bdl-btn[aria-expanded="true"]{background:rgba(223,193,186,.35);border-color:rgba(89,17,20,.28)}
+.bdl-btn:focus-visible{outline:2px solid var(--bdl-red);outline-offset:2px}
+.bdl-btn svg{width:18px;height:18px;flex:none}
+.bdl-btn .bdl-code{font-size:11px;font-weight:600;letter-spacing:.04em;padding:2px 7px;border-radius:999px;background:var(--bdl-red);color:var(--bdl-cream);line-height:1.4}
+.bdl-btn .bdl-code:empty{display:none}
+/* floating variant, for pages that have no header */
+.bdl-float{position:fixed;top:max(14px,env(safe-area-inset-top));inset-inline-end:14px;z-index:60}
+.bdl-float .bdl-btn{background:rgba(248,237,229,.88);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 6px 18px rgba(89,17,20,.14)}
+
+/* ---------- the panel ---------- */
+.bdl-scrim{position:fixed;inset:0;z-index:70;background:rgba(30,0,4,.28);opacity:0;pointer-events:none;transition:opacity .2s}
+.bdl-scrim.on{opacity:1;pointer-events:auto}
+.bdl-panel{position:fixed;z-index:71;direction:rtl;text-align:right;font-family:"IBM Plex Sans Arabic",system-ui,sans-serif;color:var(--bdl-red);background:#fffaf6;border:1px solid var(--bdl-line);box-shadow:0 22px 50px rgba(89,17,20,.22);display:flex;flex-direction:column;overflow:hidden;
+  inset:auto 0 0 0;max-height:82vh;border-radius:26px 26px 0 0;padding-bottom:env(safe-area-inset-bottom);
+  transform:translateY(105%);transition:transform .28s ease,opacity .2s;opacity:0;pointer-events:none}
+.bdl-panel.on{transform:none;opacity:1;pointer-events:auto}
+@media(min-width:700px){
+  .bdl-panel{inset:auto;width:360px;max-height:min(560px,78vh);border-radius:22px;transform:translateY(-6px)}
+  .bdl-scrim{background:transparent}
+}
+.bdl-head{display:flex;align-items:center;gap:12px;padding:18px 20px 10px}
+.bdl-mark{width:38px;height:38px;flex:none;border-radius:12px;background:var(--bdl-red);display:grid;place-items:center}
+.bdl-mark i{display:block;width:26px;height:14px;background:var(--bdl-cream);-webkit-mask:var(--bdl-logo) center/contain no-repeat;mask:var(--bdl-logo) center/contain no-repeat}
+.bdl-ttl{flex:1;min-width:0}
+.bdl-ttl b{display:block;font-size:17px;font-weight:600;line-height:1.4}
+.bdl-ttl span{display:block;font-size:12.5px;color:var(--bdl-muted);direction:ltr;text-align:right}
+.bdl-x{width:38px;height:38px;border-radius:12px;border:1px solid var(--bdl-line);background:transparent;color:var(--bdl-red);font:300 22px/1 inherit;cursor:pointer}
+.bdl-search{margin:4px 20px 8px;position:relative}
+.bdl-search input{width:100%;height:44px;border-radius:999px;border:1px solid var(--bdl-line);background:var(--bdl-cream);color:var(--bdl-red);font:400 15px "IBM Plex Sans Arabic",system-ui,sans-serif;padding:0 40px 0 16px;outline:none}
+.bdl-search input:focus{border-color:rgba(89,17,20,.4)}
+.bdl-search input::placeholder{color:rgba(89,17,20,.5)}
+.bdl-search svg{position:absolute;right:14px;top:13px;width:18px;height:18px;opacity:.55}
+.bdl-list{overflow:auto;padding:0 12px 10px;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:var(--bdl-rose) transparent}
+.bdl-sec{font-size:12px;font-weight:500;color:var(--bdl-muted);letter-spacing:.04em;padding:12px 10px 4px}
+.bdl-opt{display:flex;align-items:center;gap:10px;width:100%;padding:9px 10px;border:0;border-radius:14px;background:transparent;color:var(--bdl-red);font:inherit;text-align:inherit;cursor:pointer}
+.bdl-opt:hover,.bdl-opt:focus-visible{background:rgba(223,193,186,.32);outline:none}
+.bdl-opt .n{flex:1;min-width:0;display:flex;flex-direction:column;line-height:1.45}
+.bdl-opt .n b{font-weight:500;font-size:15.5px}
+.bdl-opt .n small{font-size:12.5px;color:var(--bdl-muted)}
+.bdl-opt .c{font-size:11px;color:var(--bdl-muted);direction:ltr;opacity:.8}
+.bdl-opt[aria-current="true"]{background:var(--bdl-red);color:var(--bdl-cream)}
+.bdl-opt[aria-current="true"] .n small,.bdl-opt[aria-current="true"] .c{color:var(--bdl-rose)}
+.bdl-empty{padding:20px 10px;text-align:center;color:var(--bdl-muted);font-size:14px}
+.bdl-foot{border-top:1px solid var(--bdl-line);padding:10px 20px 14px;font-size:12px;color:var(--bdl-muted);line-height:1.6;background:rgba(248,237,229,.6)}
+.bdl-foot span{display:block;direction:ltr;text-align:right}
+.bdl-busy{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:72;background:var(--bdl-red);color:var(--bdl-cream);font:400 13.5px "IBM Plex Sans Arabic",system-ui,sans-serif;padding:9px 18px;border-radius:999px;box-shadow:0 8px 20px rgba(89,17,20,.25);opacity:0;transition:opacity .25s;pointer-events:none}
+.bdl-busy.on{opacity:1}
+
+/* ---------- LTR layout fixes once a left-to-right language is chosen ---------- */
+html[dir="ltr"] body{text-align:left}
+html[dir="ltr"] .free,html[dir="ltr"] .news input{text-align:left}
+html[dir="ltr"] .price .amt{text-align:right}
+@media(min-width:900px){
+  html[dir="ltr"] .hero .txt,html[dir="ltr"] .book .info,html[dir="ltr"] .acc .sh{text-align:left}
+  html[dir="ltr"] .hero p{margin-right:auto;margin-left:0}
+}
+/* translated text in Latin scripts: keep Plex (it has Latin glyphs) */
+html.bdl-translated body{font-family:"IBM Plex Sans Arabic","IBM Plex Sans",system-ui,sans-serif}
