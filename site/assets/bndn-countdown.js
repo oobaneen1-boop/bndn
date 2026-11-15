@@ -15,7 +15,7 @@
   var END = new Date('2026-12-31T23:59:59+03:00').getTime();
   var KEY = 'bndn_faragh_cd_seen';
   var URL = 'https://bndn.thewayl.com/product/cmwarov8x00dk0j0tal6nyhxi';
-  var ASSET = '/bndn/site/assets/';
+  var ASSET = (document.currentScript && document.currentScript.src) ? document.currentScript.src.replace(/[^/?#]*([?#].*)?$/, '') : '/site/assets/';
   if (Date.now() > END) return;                       // launch price over → no popup
   try { if (sessionStorage.getItem(KEY) && !/[?&]cd=1/.test(location.search)) return; } catch(e){}
 
