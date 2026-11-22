@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>خاص — برنامج VIP | بندن</title>
+<meta name="description" content="برنامج خاص من بندن، ينصمم إلج انتِ حسب شنو تحتاجين وشلون تمشين.">
+<link rel="canonical" href="https://thebndn.com/vip/">
+<meta property="og:locale" content="ar_IQ">
+<meta property="og:site_name" content="بندن">
+<meta property="og:type" content="website">
+<meta property="og:title" content="خاص — برنامج VIP | بندن">
+<meta property="og:description" content="برنامج خاص من بندن، ينصمم إلج انتِ حسب شنو تحتاجين وشلون تمشين.">
+<meta property="og:url" content="https://thebndn.com/vip/">
+<meta property="og:image" content="https://thebndn.com/site/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="خاص — برنامج VIP | بندن">
+<meta name="twitter:description" content="برنامج خاص من بندن، ينصمم إلج انتِ حسب شنو تحتاجين وشلون تمشين.">
+<meta name="twitter:image" content="https://thebndn.com/site/assets/og.jpg">
+<meta name="theme-color" content="#591114">
+<link rel="icon" href="../site/assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="192x192" href="../site/assets/icon-192.png">
+<link rel="apple-touch-icon" href="../site/assets/apple-touch-icon.png">
+<link rel="preload" href="../site/assets/IBMPlexSansArabic-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="assets/Sultani-Bold.ttf" as="font" type="font/ttf" crossorigin>
+<style>
+@font-face{font-family:"IBM Plex Sans Arabic";font-weight:300;src:url(../site/assets/IBMPlexSansArabic-Light.ttf) format("truetype");font-display:swap}
+@font-face{font-family:"IBM Plex Sans Arabic";font-weight:400;src:url(../site/assets/IBMPlexSansArabic-Regular.ttf) format("truetype");font-display:swap}
+@font-face{font-family:"IBM Plex Sans Arabic";font-weight:500;src:url(../site/assets/IBMPlexSansArabic-Medium.ttf) format("truetype");font-display:swap}
+@font-face{font-family:"IBM Plex Sans Arabic";font-weight:600;src:url(../site/assets/IBMPlexSansArabic-SemiBold.ttf) format("truetype");font-display:swap}
+@font-face{font-family:Sultani;src:url(assets/Sultani-Bold.ttf) format("truetype");font-weight:700;font-style:normal;font-display:swap}
+
+:root{--cream:#f6eee6;--paper:#fffaf5;--rose:#dfc1ba;--red:#591114;--ink:#591114;--muted:#7a3e40;--line:rgba(89,17,20,.14);--gold:#c4a36a;--gold-dim:rgba(196,163,106,.5)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:"IBM Plex Sans Arabic",sans-serif;font-weight:400;color:var(--ink);background:var(--cream);line-height:1.9;font-size:16px;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%;display:block}
+button,a{font-family:inherit}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+.logo,.bndn-word{display:inline-block;background:currentColor;-webkit-mask:url(../site/assets/logo.svg) center/contain no-repeat;mask:url(../site/assets/logo.svg) center/contain no-repeat;aspect-ratio:1027/502}
+.bndn-word{height:1.15em;width:auto;vertical-align:-.22em;margin:0 .08em}
+.velvet{background:#591114 url(../site/assets/velvet.jpg) repeat;background-size:360px auto;color:var(--cream);position:relative}
+.velvet::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 50% 0%,rgba(255,220,210,.10),transparent 60%),linear-gradient(rgba(40,0,5,.10),rgba(40,0,5,.28));pointer-events:none;border-radius:inherit}
+.velvet>*{position:relative}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.demo-bar{background:#ead3c8;color:var(--red);text-align:center;font-size:12.5px;padding:8px 14px;font-weight:500;position:relative;z-index:31;letter-spacing:.01em}
+
+header{position:sticky;top:0;z-index:30;background:rgba(246,238,230,.94);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--gold-dim)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+header .logo{height:30px;color:var(--red)}
+nav.desk{display:none;gap:26px;font-size:14.5px;font-weight:500}
+nav.desk a{text-decoration:none;opacity:.8}
+nav.desk a[aria-current="page"]{opacity:1;box-shadow:inset 0 -1px 0 var(--gold)}
+header .h-cta{display:none}
+.hd-end{display:flex;align-items:center;gap:8px}
+.burger{width:44px;height:44px;border:1px solid var(--line);border-radius:10px;background:transparent;display:grid;place-items:center;cursor:pointer;color:var(--red)}
+.burger span{display:block;width:18px;height:1.4px;background:currentColor;box-shadow:0 -6px 0 currentColor,0 6px 0 currentColor}
+.drawer{position:fixed;inset:0;z-index:40;display:none}
+.drawer.open{display:block}
+.drawer .panel{position:absolute;inset:0 0 0 auto;width:min(86vw,360px);padding:22px 24px calc(28px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:4px;overflow:auto}
+.drawer .shade{position:absolute;inset:0;background:rgba(30,0,4,.5)}
+.drawer .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.drawer .top .logo{height:30px;color:var(--cream)}
+.drawer .x{width:44px;height:44px;border:0;background:transparent;color:var(--cream);font-size:28px;cursor:pointer;line-height:1}
+.drawer .l{text-decoration:none;padding:12px 0;border-bottom:1px solid rgba(248,237,229,.14);display:flex;flex-direction:column;gap:2px;font-weight:500}
+.drawer .l small{font-weight:300;opacity:.7;font-size:13px}
+.drawer .btn{margin-top:22px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:10px 28px;border-radius:10px;text-decoration:none;font-weight:500;font-size:16px;border:1px solid transparent;transition:transform .15s,background .15s;cursor:pointer}
+.btn:active{transform:translateY(1px)}
+.btn.cream{background:var(--cream);color:var(--red);border-color:rgba(248,237,229,.7);box-shadow:0 10px 24px rgba(20,0,5,.28)}
+.btn.red{background:var(--red);color:var(--cream);border-color:rgba(196,163,106,.45);box-shadow:0 8px 18px rgba(89,17,20,.18)}
+.btn.block{width:100%}
+
+.lace{position:absolute;left:0;right:0;height:34px;background:url(../site/assets/lace-cream.png) repeat-x;background-size:52px 34px;opacity:.75;pointer-events:none}
+.lace.t{top:0}.lace.b{bottom:0;transform:scaleY(-1)}
+
+.hero{padding:20px 0 56px;overflow:hidden}
+.sheet-wrap{position:relative;width:min(100%,540px);margin:90px auto 0;padding:0 2px}
+.clip{position:absolute;left:50%;top:-76px;width:min(44%,176px);height:auto;transform:translateX(-50%);z-index:5;pointer-events:none;filter:drop-shadow(0 8px 12px rgba(20,0,5,.4))}
+.paper{position:relative;background:var(--paper);color:var(--ink);box-shadow:0 22px 48px rgba(20,0,5,.38)}
+.paper::before{content:"";position:absolute;inset:0;background:url(../site/assets/paper.jpg) center/cover no-repeat;opacity:.16;pointer-events:none}
+.frame{position:relative;margin:22px 18px;border:1px solid rgba(89,17,20,.26);padding:6px;z-index:1}
+.frame-in{border:1px solid rgba(89,17,20,.22);padding:28px 22px 24px}
+.hero .frame{margin:24px 20px 22px}
+.hero .frame-in{padding:34px 24px 22px;text-align:center}
+.wordmark{display:block;height:42px;width:auto;color:var(--red);margin:0 auto 8px}
+.kicker{font-weight:400;font-size:12px;letter-spacing:.22em;opacity:.7;margin:0 0 2px}
+.sultani{font-family:Sultani,serif;font-weight:700;font-size:clamp(58px,16vw,100px);line-height:1.45;margin:0 0 6px;color:var(--red)}
+.hero-sub{font-weight:400;font-size:16.5px;line-height:1.75;margin:0 auto 4px;max-width:22em}
+.hero-sub span{display:block}
+.rule{width:56px;height:1px;background:var(--gold);margin:18px auto;opacity:.85}
+.hero .btn.red{min-width:min(100%,260px);margin-top:4px}
+.catalog{margin:26px 8px 0;padding-top:14px;border-top:1px solid rgba(89,17,20,.16);font-size:10.5px;letter-spacing:.08em;line-height:1.7;color:rgba(89,17,20,.62);text-align:center}
+
+.s{padding:52px 0 8px}
+.sh{text-align:center;margin-bottom:22px}
+.sh h2{font-family:Sultani,serif;font-weight:700;font-size:clamp(34px,8.4vw,54px);line-height:1.45;margin:4px 0 10px;color:var(--red)}
+.sh p{margin:0 auto;color:var(--muted);max-width:28em;font-weight:400;font-size:16.5px;line-height:1.85}
+.gold-line{display:flex;align-items:center;justify-content:center;gap:12px;margin:0 auto 8px;color:var(--gold);font-size:11px;letter-spacing:.2em}
+.gold-line::before,.gold-line::after{content:"";width:28px;height:1px;background:currentColor;opacity:.7}
+
+.cards{display:grid;gap:14px;width:min(100%,860px);margin:0 auto}
+.card{position:relative;background:var(--paper);border:1px solid var(--gold-dim);border-radius:16px;box-shadow:0 8px 22px rgba(89,17,20,.06);padding:22px 20px 20px;text-align:center;overflow:hidden}
+.card::before{content:"";position:absolute;top:0;left:20%;right:20%;height:1.5px;background:var(--gold);opacity:.75}
+.card h3{margin:8px 0 8px;font-size:18.5px;font-weight:600;line-height:1.5;color:var(--red)}
+.card p{margin:0 auto;color:var(--muted);font-size:16px;line-height:1.85;max-width:28em;font-weight:400}
+.seal{width:36px;height:36px;margin:4px auto 2px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--red)}
+.seal span{width:18px;height:26px;background:currentColor;-webkit-mask:url(../site/assets/bd-monogram.svg) center/contain no-repeat;mask:url(../site/assets/bd-monogram.svg) center/contain no-repeat}
+
+.steps{display:grid;gap:14px;width:min(100%,640px);margin:0 auto}
+.step{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;text-align:right;background:var(--paper);border:1px solid var(--gold-dim);border-radius:16px;box-shadow:0 8px 22px rgba(89,17,20,.06);padding:18px 18px 18px 16px}
+.num{width:42px;height:42px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;font-weight:500;font-size:16px;color:var(--red);flex-shrink:0;background:transparent;margin-top:2px}
+.step h3{margin:2px 0 4px;font-size:18px;font-weight:600;line-height:1.45;color:var(--red)}
+.step p{margin:0;color:var(--muted);font-size:16px;line-height:1.85}
+
+.pay-grid{display:grid;gap:14px;width:min(100%,640px);margin:8px auto 0}
+.opt{border:1px solid var(--gold-dim);border-radius:16px;padding:24px 16px 22px;text-align:center;display:flex;flex-direction:column;align-items:center;background:var(--paper);box-shadow:0 8px 22px rgba(89,17,20,.06);min-height:132px}
+.radio{width:18px;height:18px;border:1.4px solid var(--gold);border-radius:50%;margin-bottom:12px;flex-shrink:0}
+.cadence{font-weight:600;font-size:20px;line-height:1.3;margin:0 0 8px;color:var(--red)}
+.hint{font-weight:400;font-size:15.5px;margin:0;color:var(--muted);max-width:16em;line-height:1.7}
+.pay-note{margin:22px auto 0;text-align:center;color:var(--muted);font-size:15px;font-weight:400;max-width:34em;line-height:1.85}
+
+.pay-box{position:relative;width:min(100%,680px);margin:0 auto;background:#591114 url(../site/assets/velvet.jpg) repeat;background-size:360px auto;color:var(--cream);border-radius:18px;overflow:hidden;padding:32px 18px 28px;border:1px solid rgba(196,163,106,.5);box-shadow:0 16px 36px rgba(89,17,20,.22)}
+.pay-box::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 50% 0%,rgba(255,220,210,.12),transparent 58%),linear-gradient(rgba(40,0,5,.10),rgba(40,0,5,.34));pointer-events:none}
+.pay-box>*{position:relative;z-index:1}
+.pay-box .sh{margin-bottom:18px}
+.pay-box .sh h2{color:var(--cream)}
+.pay-box .sh p{color:var(--rose)}
+.pay-box .gold-line{color:var(--gold)}
+.pay-box .pay-grid{width:100%;margin:8px auto 0}
+.pay-box .opt{background:rgba(246,238,230,.08);border:1px solid rgba(196,163,106,.5);box-shadow:none;color:var(--cream)}
+.pay-box .cadence{color:var(--cream)}
+.pay-box .hint{color:var(--rose)}
+.pay-box .pay-note{color:var(--rose);margin-top:20px}
+.pay-box .radio{border-color:var(--gold)}
+
+.form-sec{padding:56px 0 72px}
+.form-sheet{position:relative;background:var(--paper);color:var(--ink);width:min(100%,640px);margin:0 auto;border:1px solid var(--gold-dim);border-radius:18px;box-shadow:0 12px 32px rgba(89,17,20,.08);overflow:hidden}
+.form-sheet::before{content:"";position:absolute;inset:0;background:url(../site/assets/paper.jpg) center/cover no-repeat;opacity:.14;pointer-events:none}
+.form-sheet .inner{position:relative;padding:28px 20px 24px}
+.form-sheet .logo{height:40px;color:var(--red);margin:0 auto 4px;display:block}
+.form-sheet .kicker{text-align:center;color:var(--muted);letter-spacing:.18em}
+.form-sheet h2{font-family:Sultani,serif;font-weight:700;font-size:clamp(28px,7.2vw,44px);line-height:1.45;margin:4px 0 8px;text-align:center;color:var(--red)}
+.form-sheet .lead{color:var(--muted);font-weight:400;font-size:16px;line-height:1.8;text-align:center;margin:0 auto 22px;max-width:28em}
+#vip-form{display:flex;flex-direction:column;gap:18px}
+#vip-form .field{display:flex;flex-direction:column;gap:8px}
+#vip-form label.flab,#vip-form legend{font-weight:500;font-size:15.5px;color:var(--red);line-height:1.6;margin:0}
+#vip-form .help{font-weight:400;font-size:13.5px;color:var(--muted);margin:-2px 0 0}
+#vip-form input[type=text],#vip-form textarea{
+  width:100%;max-width:100%;
+  font-family:inherit;font-size:16px;line-height:1.6;color:var(--red);
+  background:rgba(246,238,230,.7);
+  border:1px solid rgba(89,17,20,.22);
+  border-radius:10px;
+  padding:12px 14px;
+  min-height:48px;
+  outline:none;
+  -webkit-appearance:none;appearance:none;
+  direction:rtl;text-align:right;
+}
+#vip-form textarea{min-height:112px;resize:vertical;padding-top:12px}
+#vip-form input[type=text]:focus,#vip-form textarea:focus{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+#vip-form fieldset{border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
+#vip-form .chips{display:flex;flex-wrap:wrap;gap:8px}
+#vip-form .chip{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:44px;padding:8px 12px;
+  border:1px solid rgba(89,17,20,.22);
+  background:rgba(246,238,230,.7);
+  color:var(--red);
+  font-size:15px;font-weight:400;line-height:1.4;
+  cursor:pointer;flex:1 1 calc(50% - 8px);
+  text-align:center;border-radius:10px;
+}
+#vip-form .chip input{position:absolute;opacity:0;pointer-events:none}
+#vip-form .chip:has(input:checked),#vip-form .chip.on{background:var(--red);color:var(--cream);border-color:var(--red)}
+#vip-form .chip:has(input:focus-visible){box-shadow:0 0 0 2px var(--gold)}
+#vip-form .chips .chip:last-child:nth-child(odd){flex-basis:100%}
+#vip-form .actions{margin-top:4px}
+#vip-form .btn{width:100%;max-width:100%}
+#vip-form .form-err{display:none;color:var(--red);background:rgba(89,17,20,.07);border:1px solid rgba(89,17,20,.18);padding:10px 12px;font-size:14.5px;line-height:1.7;border-radius:10px}
+#vip-form .form-err.show{display:block}
+
+footer{padding:48px 0 calc(36px + env(safe-area-inset-bottom));text-align:center;border-top:1px solid var(--gold-dim);background:var(--cream)}
+footer .logo{height:36px;color:var(--red);margin:0 auto 18px;display:block}
+.flinks{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 16px;font-size:14.5px;font-weight:500;margin:0 0 22px}
+.flinks a{text-decoration:none;opacity:.85}
+.support{background:var(--paper);border:1px solid var(--gold-dim);border-radius:16px;padding:22px 18px;max-width:420px;margin:0 auto;display:flex;flex-direction:column;gap:6px;box-shadow:0 8px 22px rgba(89,17,20,.05)}
+.support b{font-size:15px}
+.support a{text-decoration:none;font-weight:500}
+.copy{font-size:12.5px;color:var(--muted);margin-top:18px;display:flex;align-items:center;justify-content:center;gap:8px}
+.copy .bndn-word{color:var(--red);height:18px}
+
+@media(min-width:700px){
+  .sheet-wrap{width:min(100%,620px);margin-top:116px}
+  .clip{top:-98px;width:220px}
+  .hero .frame{margin:30px 32px 28px;padding:7px}
+  .hero .frame-in{padding:46px 40px 28px}
+  .wordmark{height:52px}
+  .cards{grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch}
+  .card{padding:24px 18px 22px;display:flex;flex-direction:column;align-items:center}
+  .pay-grid{grid-template-columns:1fr 1fr;gap:16px}
+  .pay-box{padding:40px 32px 34px}
+  .form-sheet .inner{padding:36px 36px 32px}
+  #vip-form .chip{flex:1 1 0;min-width:22%}
+  #vip-form .chips .chip:last-child:nth-child(odd){flex-basis:0}
+}
+@media(min-width:900px){
+  body{font-size:17px}
+  nav.desk{display:flex}
+  header .h-cta{display:inline-flex;min-height:42px;padding:6px 18px;font-size:14.5px}
+  .burger{display:none}
+  header .wrap{height:72px}
+  header .logo{height:34px}
+  .hero{padding:28px 0 72px}
+  .sultani{font-size:108px}
+  .hero-sub{font-size:19px}
+  .s{padding:64px 0 12px}
+  .form-sheet h2{font-size:48px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="../site/" aria-label="بندن"><span class="logo" style="height:30px"></span></a>
+    <nav class="desk" aria-label="القائمة">
+      <a href="../site/#programs">البرامج</a>
+      <a href="#vip" aria-current="page">VIP</a>
+      <a href="../site/#booklet">الكتيّب</a>
+      <a href="../site/#newsletter">النشرة</a>
+      <a href="../site/#community">المجتمع</a>
+      <a href="../site/#faq">الأسئلة</a>
+    </nav>
+    <div class="hd-end">
+      <a class="btn red h-cta" href="#request">دزيلي</a>
+      <button class="burger" aria-label="القائمة" onclick="document.getElementById('dr').classList.add('open')"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="dr">
+  <div class="shade" onclick="this.parentNode.classList.remove('open')"></div>
+  <div class="panel velvet">
+    <div class="top"><span class="logo" style="height:30px"></span><button class="x" aria-label="إغلاق" onclick="document.getElementById('dr').classList.remove('open')">×</button></div>
+    <a class="l" href="../site/#programs" onclick="dr.classList.remove('open')">البرامج <small>وتيرة · ترنيمة</small></a>
+    <a class="l" href="#vip" onclick="dr.classList.remove('open')">VIP <small>برنامج خاص</small></a>
+    <a class="l" href="../site/#booklet" onclick="dr.classList.remove('open')">كتيّب فنّ الفراغ <small>43 صفحة</small></a>
+    <a class="l" href="https://bndn.thewayl.com/" target="_blank" rel="noopener">المتجر <small>Wayl</small></a>
+    <a class="l" href="../site/#newsletter" onclick="dr.classList.remove('open')">النشرة الأحدية <small>كل أحد</small></a>
+    <a class="l" href="../site/#community" onclick="dr.classList.remove('open')">المجتمع <small>واتساب · إنستغرام</small></a>
+    <a class="l" href="../site/#faq" onclick="dr.classList.remove('open')">الأسئلة والدعم <small>نحن هنا</small></a>
+    <a class="btn cream block" href="#request" onclick="dr.classList.remove('open')">دزيلي على الواتساب</a>
+  </div>
+</div>
+
+<section class="hero velvet" id="vip">
+  <div class="lace t"></div>
+  <div class="lace b"></div>
+  <div class="wrap">
+    <div class="sheet-wrap">
+      <img class="clip" src="assets/gold-clip.png" alt="" width="300" height="178">
+      <article class="paper">
+        <div class="frame">
+          <div class="frame-in">
+            <span class="logo wordmark" aria-label="بندن"></span>
+            <p class="kicker">برنامج</p>
+            <h1 class="sultani">خـاص</h1>
+            <p class="hero-sub"><span>ينصمم إلج انتِ،</span><span>حسب شنو تحتاجين وشلون تمشين.</span><span>مو قالب جاهز ينعرض على كل البنات.</span></p>
+            <div class="rule"></div>
+            <a class="btn red" href="#request">دزيلي على الواتساب</a>
+            <p class="catalog">برنامج خاص · ينصمم لكل وحدة لوحدها</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="meaning">
+  <div class="wrap">
+    <div class="sh">
+      <div class="gold-line">المعنى</div>
+      <h2>شنو يعني VIP؟</h2>
+      <p>هذا البرنامج إلج لوحدج. كل وحدة ينصمم إلها مسارها، مو نسخة لكل البنات.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="seal" aria-hidden="true"><span></span></div>
+        <h3>على مقاسج</h3>
+        <p>نبدأ من وينج انتِ: شنو تحتاجين، شلون تحسين نفسج، وشنو تريدين توصلين له. وبعدين نبني المسار على هذا الكلام.</p>
+      </article>
+      <article class="card">
+        <div class="seal" aria-hidden="true"><span></span></div>
+        <h3>خطة تمشي وياج</h3>
+        <p>المدة، والمحتوى، وشلون تصير الجلسات، مو ثابتات من الأول. كل هالشي ينضبط وياج حسبج.</p>
+      </article>
+      <article class="card">
+        <div class="seal" aria-hidden="true"><span></span></div>
+        <h3>متابعة وياج خطوة بخطوة</h3>
+        <p>البرنامج فيه جلسات، ومتابعة بين جلسة وجلسة، بالشكل والوقت اللي نتفق عليه وياج.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="how">
+  <div class="wrap">
+    <div class="sh">
+      <div class="gold-line">الخطوات</div>
+      <h2>شلون يشتغل؟</h2>
+      <p>ثلاث خطوات واضحة، من أول حديث لحد ما يبلش برنامجج.</p>
+    </div>
+    <div class="steps">
+      <article class="step">
+        <div class="num" aria-hidden="true">١</div>
+        <div>
+          <h3>حديث أول</h3>
+          <p>نحجي وياج. تگولين وينج وشنو تحسين إنج تحتاجين، حتى نفهمج زين.</p>
+        </div>
+      </article>
+      <article class="step">
+        <div class="num" aria-hidden="true">٢</div>
+        <div>
+          <h3>نرسم البرنامج</h3>
+          <p>نحدد المدة، وشلون تتوزع الجلسات، وشنو تصير المتابعة.</p>
+        </div>
+      </article>
+      <article class="step">
+        <div class="num" aria-hidden="true">٣</div>
+        <div>
+          <h3>نمشي وياج</h3>
+          <p>نبلش بالجلسات، ونبقى وياج بين جلسة وجلسة بالمتابعة اللي اتفقنا عليها.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="pay">
+  <div class="wrap">
+    <article class="pay-box">
+      <div class="sh">
+        <div class="gold-line">الدفع</div>
+        <h2>الدفع يمشي وياج</h2>
+        <p>بعد ما ينصمم برنامجج، الدفع ينضبط وياج، وتگدرين تختارين اللي يناسبج.</p>
+      </div>
+      <div class="pay-grid">
+        <article class="opt">
+          <div class="radio" aria-hidden="true"></div>
+          <p class="cadence">كل شهر</p>
+          <p class="hint">دفعات كل شهر، طول فترة البرنامج</p>
+        </article>
+        <article class="opt">
+          <div class="radio" aria-hidden="true"></div>
+          <p class="cadence">على دفعات</p>
+          <p class="hint">تقسمين المبلغ على دفعات نتفق عليها وياج</p>
+        </article>
+      </div>
+      <p class="pay-note">ما نحط سعر من هنانا، لأن كل مسار ينصمم لوحده. التفاصيل نحجيها وياج بعد ما نرسم البرنامج.</p>
+    </article>
+  </div>
+</section>
+
+<section class="form-sec" id="request">
+  <div class="wrap">
+    <article class="form-sheet">
+      <div class="inner">
+        <span class="logo" aria-label="بندن"></span>
+        <p class="kicker">طـلـب الـبـرنـامـج الـخـاص</p>
+        <div class="rule"></div>
+        <h2>أصمم المسار على مقاسج</h2>
+        <p class="lead">جاوبيني على هالأسئلة القصيرة، وبعدها نكمل الحديث على الواتساب.</p>
+        <form id="vip-form" novalidate>
+          <div class="field">
+            <label class="flab" for="f-name">اسمج</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="اكتبي اسمج">
+          </div>
+          <div class="field">
+            <label class="flab" for="f-goal">شنو هدفج من هالبرنامج؟</label>
+            <p class="help">وين تريدين توصلين؟ اكتبي بجملتين.</p>
+            <textarea id="f-goal" name="goal" required placeholder="مثلاً: أريد أطلع وأعلن عن مشروعي بثقة"></textarea>
+          </div>
+          <fieldset>
+            <legend>كم تحسين تحتاجين نجتمع؟</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="meet" value="كل أسبوع" required> كل أسبوع</label>
+              <label class="chip"><input type="radio" name="meet" value="مرتين بالشهر"> مرتين بالشهر</label>
+              <label class="chip"><input type="radio" name="meet" value="٣ مرات بالشهر"> ٣ مرات بالشهر</label>
+              <label class="chip"><input type="radio" name="meet" value="بعد ما نحجي"> بعد ما نحجي</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>شلون تحبين تكون المتابعة بين الجلسات؟</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="follow" value="مكالمة فيديو" required> مكالمة فيديو</label>
+              <label class="chip"><input type="radio" name="follow" value="واتساب"> واتساب</label>
+              <label class="chip"><input type="radio" name="follow" value="بعد ما نحجي"> بعد ما نحجي</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>شنو الوقت اللي يناسبج للحديث أول؟</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="time" value="الصباح" required> الصباح</label>
+              <label class="chip"><input type="radio" name="time" value="العصر"> العصر</label>
+              <label class="chip"><input type="radio" name="time" value="المسا"> المسا</label>
+              <label class="chip"><input type="radio" name="time" value="بعد ما نتفق"> بعد ما نتفق</label>
+            </div>
+          </fieldset>
+          <p class="form-err" id="form-err" role="alert">كملي هالحقول حتى نكمل على الواتساب.</p>
+          <div class="actions">
+            <button type="submit" class="btn red">كملي على الواتساب</button>
+          </div>
+        </form>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="logo" aria-label="بندن"></span>
+    <div class="flinks">
+      <a href="../site/#programs">البرامج</a>
+      <a href="#vip">VIP</a>
+      <a href="../site/#booklet">الكتيّب</a>
+      <a href="https://bndn.thewayl.com/" target="_blank" rel="noopener">المتجر</a>
+      <a href="https://ehdaash.com/@bndn" target="_blank" rel="noopener">النشرة الأحدية</a>
+      <a href="https://chat.whatsapp.com/CQlfldqnIbUALMXve7nvPB?mode=gi_t" target="_blank" rel="noopener">واتساب</a>
+      <a href="https://instagram.com/thebndn" target="_blank" rel="noopener">إنستغرام</a>
+      <a href="../site/#faq">الأسئلة</a>
+    </div>
+    <div class="support">
+      <b>الدعم</b>
+      <span>مشكلة بالكتيّب أو الدفع أو أي شي ثاني؟</span>
+      <a href="mailto:thebndn@mail.grokbot.com" class="ltr">thebndn@mail.grokbot.com</a>
+      <a href="https://wa.me/9647892957772" class="ltr">WhatsApp +964 789 295 7772</a>
+    </div>
+    <div class="copy"><span class="bndn-word" aria-label="بندن"></span> · <span class="ltr">2026</span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var form = document.getElementById('vip-form');
+  if(!form) return;
+  var err = document.getElementById('form-err');
+  function syncChips(){
+    form.querySelectorAll('.chip').forEach(function(c){
+      var inp=c.querySelector('input');
+      if(inp) c.classList.toggle('on', !!inp.checked);
+    });
+  }
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var fd = new FormData(form);
+    var name = String(fd.get('name')||'').trim();
+    var goal = String(fd.get('goal')||'').trim();
+    var meet = String(fd.get('meet')||'').trim();
+    var follow = String(fd.get('follow')||'').trim();
+    var time = String(fd.get('time')||'').trim();
+    if(!name || !goal || !meet || !follow || !time){
+      if(err) err.classList.add('show');
+      if(!name && form.querySelector('#f-name')) form.querySelector('#f-name').focus();
+      else if(!goal && form.querySelector('#f-goal')) form.querySelector('#f-goal').focus();
+      return;
+    }
+    if(err) err.classList.remove('show');
+    var msg = 'هلا بنين، أريد أقدم على البرنامج الخاص.' +
+      '\n\nالاسم: ' + name +
+      '\nالهدف: ' + goal +
+      '\nكم أحس أحتاج نجتمع: ' + meet +
+      '\nالمتابعة: ' + follow +
+      '\nوقت الحديث أول: ' + time;
+    window.location.href = 'https://wa.me/9647892957772?text=' + encodeURIComponent(msg);
+  });
+  form.addEventListener('input', function(){ if(err) err.classList.remove('show'); });
+  form.addEventListener('change', function(){ if(err) err.classList.remove('show'); syncChips(); });
+  syncChips();
+})();
+</script>
+<script data-goatcounter="https://thebndn.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
